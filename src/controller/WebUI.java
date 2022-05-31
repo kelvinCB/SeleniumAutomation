@@ -3,7 +3,7 @@ package controller;
 import java.awt.Toolkit;
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -222,6 +222,22 @@ public class WebUI {
 			driver.findElement(object).click();
 			System.out.println(object+" Unchecked.");
 		}else System.out.println(object+" Already Unchecked.");		
+	}
+	
+	public static void acceptAlert() {
+		driver.switchTo().alert().accept();
+		System.out.println("Alert accepted.");
+	}
+	
+	public static void dismissAlert() {
+		
+		driver.switchTo().alert().dismiss();
+		System.out.println("Alert dismissed.");
+	}
+	
+	public static String getAlertText() {
+		System.out.println("Alert text: "+driver.switchTo().alert().getText());
+		return driver.switchTo().alert().getText();
 	}
 
 }

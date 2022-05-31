@@ -63,5 +63,12 @@ public class ObjectConstants {
 	public static final By SENIOR_CITIZEN_CHECKBOX			= By.cssSelector("input[id*='SeniorCitizenDiscount']");
 	public static final By STUDEN_CHECKBOX					= By.cssSelector("input[id*='StudentDiscount']");
 	
+	/************************************/
+	/** AUTOMATION PRACTICE  / ALERTS  **/
+	/************************************/
+	
+	public static final By ENTER_NAME				 		= By.id("name");
+	public static final By ALERT				 			= By.id("alertbtn");
+	public static final By CONFIRM				 			= By.id("confirmbtn");
 	
 }

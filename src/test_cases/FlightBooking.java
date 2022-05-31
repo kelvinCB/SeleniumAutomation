@@ -26,15 +26,13 @@ public class FlightBooking {
 		WebUI.clic(ObjectConstants.JAIPUR_DESTINATION);
 		WebUI.setText(ObjectConstants.COUNTRY_SEARCH_DROPDOWN, "in");
 		WebUI.selectOptionByList(ObjectConstants.COUNTRY_SEARCH_LIST, "Ukraine");
+		WebUI.check(ObjectConstants.FAMILY_AND_FRIENDS_CHECKBOX);		
+		WebUI.check(ObjectConstants.SENIOR_CITIZEN_CHECKBOX);
+		WebUI.uncheck(ObjectConstants.SENIOR_CITIZEN_CHECKBOX);
+		WebUI.uncheck(ObjectConstants.SENIOR_CITIZEN_CHECKBOX);
 		WebUI.check(ObjectConstants.FAMILY_AND_FRIENDS_CHECKBOX);
-		WebUI.delay(4);
-//		WebUI.check(ObjectConstants.SENIOR_CITIZEN_CHECKBOX);
-//		WebUI.uncheck(ObjectConstants.SENIOR_CITIZEN_CHECKBOX);
-//		WebUI.uncheck(ObjectConstants.SENIOR_CITIZEN_CHECKBOX);
-		WebUI.check(ObjectConstants.FAMILY_AND_FRIENDS_CHECKBOX);
-		WebUI.delay(4);
 		WebUI.check(ObjectConstants.STUDEN_CHECKBOX);
-		//WebUI.closeBrowser();
+		WebUI.closeBrowser();
 		WebUI.soundBeep();
 	}
 
