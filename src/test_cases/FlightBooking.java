@@ -24,7 +24,9 @@ public class FlightBooking {
 		WebUI.clic(ObjectConstants.DEPARTURE_CITY_DROPDOWN);
 		WebUI.clic(ObjectConstants.BHOPAL_DESTINATION);
 		WebUI.clic(ObjectConstants.JAIPUR_DESTINATION);
-		//WebUI.closeBrowser();
+		WebUI.setText(ObjectConstants.COUNTRY_SEARCH_DROPDOWN, "in");
+		WebUI.selectOptionByList(ObjectConstants.COUNTRY_SEARCH_LIST, "Ukraine");
+		WebUI.closeBrowser();
 		WebUI.soundBeep();
 	}
 

@@ -47,6 +47,8 @@ public class ObjectConstants {
 	
 	public static final By CURRENCY_DROPDOWN			    = By.xpath("//select[@id='ctl00_mainContent_DropDownListCurrency']"); 
 	public static final By PASSENGER_DROPDOWN				= By.id("divpaxinfo");
+	public static final By COUNTRY_SEARCH_DROPDOWN			= By.id("autosuggest");
+	public static final By COUNTRY_SEARCH_LIST				= By.cssSelector("li[class='ui-menu-item'] a");
 	public static final By INCREMENT_ADULT				 	= By.id("hrefIncAdt");
 	public static final By DECREMENT_ADULT				 	= By.id("hrefDecChd");
 	public static final By INCREMENT_CHILD				 	= By.id("hrefIncChd");

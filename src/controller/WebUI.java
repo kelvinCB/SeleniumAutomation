@@ -3,6 +3,7 @@ package controller;
 
 import java.awt.Toolkit;
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -187,6 +188,25 @@ public class WebUI {
 		Select dropdown = new Select(element);
 		dropdown.selectByValue(value);
 		System.out.println("Element selected: "+dropdown.getFirstSelectedOption().getText());
+	}
+	
+	public static void selectOptionByList(By listObjects, String option) {
+		
+		List<WebElement> options = driver.findElements(listObjects);
+		int i = 1;
+		for(WebElement element : options) {
+			i=i;
+			if(element.getText().equalsIgnoreCase(option)) {
+				System.out.println(i+". "+element.getText()+" = "+option);
+				element.click();
+				options.clear();
+				break;
+			}else {
+				System.out.println(i+". "+element.getText()+" != "+option);
+			}
+			i++;
+		}
+		
 	}
 	
 }
