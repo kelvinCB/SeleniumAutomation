@@ -8,7 +8,7 @@ public class AlertManagement {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		WebUI.initializeBrowser("CHROME");
+		WebUI.initializeBrowser("EDGE");
 		WebUI.openBrowser("https://rahulshettyacademy.com/AutomationPractice/");
 		WebUI.maximizedWindow();
 		WebUI.setText(ObjectConstants.ENTER_NAME, "Alta Gama, Nuevo Rico");
