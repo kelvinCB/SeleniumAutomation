@@ -1,6 +1,5 @@
 package controller;
 
-
 import java.awt.Toolkit;
 import java.time.Duration;
 import java.util.List;
@@ -53,7 +52,7 @@ public class WebUI {
 			System.out.println("EDGE was initialized!");
 			break;
 		default:
-			implicitWait(10); 
+			implicitWait(10);
 			System.out.println("Cannot Open Browser with that key or driver");
 		}
 
@@ -61,17 +60,18 @@ public class WebUI {
 
 	public static void openBrowser(String URL) {
 		driver.get(URL);
-		System.out.println("Browser was opened in: "+URL);
+		System.out.println("Browser was opened in: " + URL);
 	}
-	
+
 	public static void navigateToURL(String URL) {
 		driver.navigate().to(URL);
 	}
-	
+
 	public static void goBack() {
-		driver.navigate().back();;
+		driver.navigate().back();
+		;
 	}
-	
+
 	public static void goFoward() {
 		driver.navigate().forward();
 	}
@@ -92,121 +92,136 @@ public class WebUI {
 	public static String getCurrentURL() {
 		return driver.getCurrentUrl();
 	}
-	
+
 	public static void maximizedWindow() {
 		driver.manage().window().maximize();
 	}
-	
+
 	public static void minimizedWindow() {
-		Point p = new Point(0,3000);
+		Point p = new Point(0, 3000);
 		driver.manage().window().setPosition(p);
 	}
-	
+
 	public static void restoreWindow() {
 		Dimension d = new Dimension(300, 1080);
 		driver.manage().window().setSize(d);
 	}
-	
+
 	public static void clic(By object) {
 		driver.findElement(object).click();
-		System.out.println("Element: "+ object +" clicked");
+		System.out.println("Element: " + object + " clicked");
 	}
-	
+
 	public static void setText(By object, String text) {
 		driver.findElement(object).sendKeys(text);
-		System.out.println("Text: "+ text + " was written on Element: "+ object);
+		System.out.println("Text: " + text + " was written on Element: " + object);
 	}
-	
+
 	public static String getText(By object) {
-		System.out.println("Obtained Text: "+ driver.findElement(object).getText());
+		System.out.println("Obtained Text: " + driver.findElement(object).getText());
 		return driver.findElement(object).getText();
 	}
-	
+
 	public static void doubleClic(By object) {
 		clic(object);
 		clic(object);
 	}
-	
+
 	public static void clear(By object) {
 		driver.findElement(object).clear();
 	}
-	
+
 	public static void delay(int seconds) {
 		try {
-			Thread.sleep(seconds*1000);
+			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void implicitWait(int seconds) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds)); 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
 	}
-	
+
 	public static void scrollToObject(By object) {
 		js = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(object);
-		 //This will scroll the page till the element is found		
-        js.executeScript("arguments[0].scrollIntoView();", element);
-        System.out.println("Object scrolled: "+object);
+		// This will scroll the page till the element is found
+		js.executeScript("arguments[0].scrollIntoView();", element);
+		System.out.println("Object scrolled: " + object);
 	}
-	
+
 	public static void scrollToPosition(int positionX, int positionY) {
 		js = (JavascriptExecutor) driver;
-		// This  will scroll down the page by  1000 pixel vertical		
-        js.executeScript("window.scrollBy("+positionX+","+positionY+")");
-        System.out.println("Position scrolled: "+ positionX + "," + positionY );
+		// This will scroll down the page by 1000 pixel vertical
+		js.executeScript("window.scrollBy(" + positionX + "," + positionY + ")");
+		System.out.println("Position scrolled: " + positionX + "," + positionY);
 	}
 
 	public static void scrollToBottom() {
 		js = (JavascriptExecutor) driver;
-		//This will scroll the web page till end.		
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		// This will scroll the web page till end.
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	}
-	
+
 	public static void soundBeep() {
 		Toolkit.getDefaultToolkit().beep();
 	}
-	
+
 	public static void selectOptionByIndex(By object, int index) {
 		WebElement element = driver.findElement(object);
 		Select dropdown = new Select(element);
 		dropdown.selectByIndex(index);
-		System.out.println("Element selected: "+dropdown.getFirstSelectedOption().getText());
+		System.out.println("Element selected: " + dropdown.getFirstSelectedOption().getText());
 	}
-	
+
 	public static void selectOptionByLabel(By object, String label) {
 		WebElement element = driver.findElement(object);
 		Select dropdown = new Select(element);
 		dropdown.selectByVisibleText(label);
-		System.out.println("Element selected: "+dropdown.getFirstSelectedOption().getText());
+		System.out.println("Element selected: " + dropdown.getFirstSelectedOption().getText());
 	}
-	
+
 	public static void selectOptionByValue(By object, String value) {
 		WebElement element = driver.findElement(object);
 		Select dropdown = new Select(element);
 		dropdown.selectByValue(value);
-		System.out.println("Element selected: "+dropdown.getFirstSelectedOption().getText());
+		System.out.println("Element selected: " + dropdown.getFirstSelectedOption().getText());
 	}
-	
+
 	public static void selectOptionByList(By listObjects, String option) {
-		
+
 		List<WebElement> options = driver.findElements(listObjects);
 		int i = 1;
-		for(WebElement element : options) {
-			i=i;
-			if(element.getText().equalsIgnoreCase(option)) {
-				System.out.println(i+". "+element.getText()+" = "+option);
+		for (WebElement element : options) {
+			if (element.getText().equalsIgnoreCase(option)) {
+				System.out.println(i + ". " + element.getText() + " = " + option);
 				element.click();
 				options.clear();
 				break;
-			}else {
-				System.out.println(i+". "+element.getText()+" != "+option);
+			} else {
+				System.out.println(i + ". " + element.getText() + " != " + option);
 			}
 			i++;
+		}
+
+	}
+	
+	public static void check (By object) {
+		if(driver.findElement(object).isSelected()) System.out.println(object+" Already checked.");
+	    else {
+			driver.findElement(object).click();
+			System.out.println(object+" Checked.");
 		}
 		
 	}
 	
+	public static void uncheck (By object) {
+		if(driver.findElement(object).isSelected()){
+			driver.findElement(object).click();
+			System.out.println(object+" Unchecked.");
+		}else System.out.println(object+" Already Unchecked.");		
+	}
+
 }

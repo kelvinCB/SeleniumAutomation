@@ -59,6 +59,9 @@ public class ObjectConstants {
 	public static final By DEPARTURE_CITY_DROPDOWN 			= By.id("ctl00_mainContent_ddl_originStation1_CTXT");
 	public static final By BHOPAL_DESTINATION				= By.xpath("//a[@value='BHO']");
 	public static final By JAIPUR_DESTINATION				= By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='JAI']");
+	public static final By FAMILY_AND_FRIENDS_CHECKBOX		= By.cssSelector("input[id*='friendsandfamily']");
+	public static final By SENIOR_CITIZEN_CHECKBOX			= By.cssSelector("input[id*='SeniorCitizenDiscount']");
+	public static final By STUDEN_CHECKBOX					= By.cssSelector("input[id*='StudentDiscount']");
 	
 	
 }
