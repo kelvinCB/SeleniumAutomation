@@ -8,6 +8,7 @@ public class FlightBooking {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		
 		WebUI.initializeBrowser("CHROME");
 		WebUI.openBrowser("https://rahulshettyacademy.com/dropdownsPractise/");
 		WebUI.maximizedWindow();
@@ -19,10 +20,12 @@ public class FlightBooking {
 		WebUI.doubleClic(ObjectConstants.INCREMENT_CHILD);
 		WebUI.doubleClic(ObjectConstants.INCREMENT_INFANT);
 		WebUI.clic(ObjectConstants.DONE_PASSENGER_DROPDOWN);
-		System.out.println(WebUI.getText(ObjectConstants.PASSENGER_DROPDOWN));
+		WebUI.getText(ObjectConstants.PASSENGER_DROPDOWN);
+		WebUI.clic(ObjectConstants.DEPARTURE_CITY_DROPDOWN);
+		WebUI.clic(ObjectConstants.BHOPAL_DESTINATION);
+		WebUI.clic(ObjectConstants.JAIPUR_DESTINATION);
+		//WebUI.closeBrowser();
 		WebUI.soundBeep();
-		WebUI.closeBrowser();
-
 	}
 
 }

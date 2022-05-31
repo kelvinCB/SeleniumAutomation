@@ -148,12 +148,14 @@ public class WebUI {
 		WebElement element = driver.findElement(object);
 		 //This will scroll the page till the element is found		
         js.executeScript("arguments[0].scrollIntoView();", element);
+        System.out.println("Object scrolled: "+object);
 	}
 	
 	public static void scrollToPosition(int positionX, int positionY) {
 		js = (JavascriptExecutor) driver;
 		// This  will scroll down the page by  1000 pixel vertical		
         js.executeScript("window.scrollBy("+positionX+","+positionY+")");
+        System.out.println("Position scrolled: "+ positionX + "," + positionY );
 	}
 
 	public static void scrollToBottom() {

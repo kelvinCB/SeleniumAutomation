@@ -54,6 +54,9 @@ public class ObjectConstants {
 	public static final By INCREMENT_INFANT				 	= By.id("hrefIncInf");
 	public static final By DECREMENT_INFANT				 	= By.id("hrefDecInf");
 	public static final By DONE_PASSENGER_DROPDOWN			= By.id("btnclosepaxoption");
+	public static final By DEPARTURE_CITY_DROPDOWN 			= By.id("ctl00_mainContent_ddl_originStation1_CTXT");
+	public static final By BHOPAL_DESTINATION				= By.xpath("//a[@value='BHO']");
+	public static final By JAIPUR_DESTINATION				= By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='JAI']");
 	
 	
 }
