@@ -1,5 +1,6 @@
 package test_cases;
 
+
 import constants.ObjectConstants;
 import controller.WebUI;
 
@@ -12,7 +13,11 @@ public class AmazonActions {
 		WebUI.openBrowser("https://www.amazon.com");
 		WebUI.maximizedWindow();
 		WebUI.mouseOver(ObjectConstants.HELLO_SIGN_IN);
-		
+		WebUI.delay(3);
+		WebUI.clic(ObjectConstants.SEARCH_BAR);
+		WebUI.setText(ObjectConstants.SEARCH_BAR, "AIRPODS");
+		WebUI.doubleClicIntoText(ObjectConstants.SEARCH_BAR, "airdots");
+		WebUI.rightClic(ObjectConstants.HELLO_SIGN_IN);
 		WebUI.soundBeep();
 		
 	}

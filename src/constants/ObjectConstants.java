@@ -89,4 +89,5 @@ public class ObjectConstants {
 	/************************/
 		
 	public static final By HELLO_SIGN_IN					= By.id("nav-link-accountList-nav-line-1");
+	public static final By SEARCH_BAR						= By.cssSelector("input[id*='searchtextbox']");
 }

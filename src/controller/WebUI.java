@@ -5,10 +5,10 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,7 +30,7 @@ public class WebUI {
 	private static JavascriptExecutor js;
 
 	public static void initializeBrowser(String browser) {
-		
+
 		switch (browser) {
 		case "OPERA":
 			System.setProperty(StringConstants.OPERA_KEY_DRIVER, StringConstants.OPERA_BROWSER_DRIVER);
@@ -133,10 +133,10 @@ public class WebUI {
 	}
 
 	public static void delay(int seconds) {
-		
-	//	WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-	//	w.until(ExpectedConditions.visibilityOfElementLocated(null));
-		
+
+		// WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+		// w.until(ExpectedConditions.visibilityOfElementLocated(null));
+
 		try {
 			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {
@@ -147,7 +147,7 @@ public class WebUI {
 
 	public static void implicitWait(int seconds) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
-		System.out.println("Implicit Wait is: "+seconds+ " seconds.");
+		System.out.println("Implicit Wait is: " + seconds + " seconds.");
 	}
 
 	public static void scrollToObject(By object) {
@@ -213,69 +213,95 @@ public class WebUI {
 		}
 
 	}
-	
-	public static void check (By object) {
-		if(driver.findElement(object).isSelected()) System.out.println(object+" Already checked.");
-	    else {
+
+	public static void check(By object) {
+		if (driver.findElement(object).isSelected())
+			System.out.println(object + " Already checked.");
+		else {
 			driver.findElement(object).click();
-			System.out.println(object+" Checked.");
+			System.out.println(object + " Checked.");
 		}
-		
+
 	}
-	
-	public static void uncheck (By object) {
-		if(driver.findElement(object).isSelected()){
+
+	public static void uncheck(By object) {
+		if (driver.findElement(object).isSelected()) {
 			driver.findElement(object).click();
-			System.out.println(object+" Unchecked.");
-		}else System.out.println(object+" Already Unchecked.");		
+			System.out.println(object + " Unchecked.");
+		} else
+			System.out.println(object + " Already Unchecked.");
 	}
-	
+
 	public static void acceptAlert() {
 		driver.switchTo().alert().accept();
 		System.out.println("Alert accepted.");
 	}
-	
+
 	public static void dismissAlert() {
-		
+
 		driver.switchTo().alert().dismiss();
 		System.out.println("Alert dismissed.");
 	}
-	
+
 	public static String getAlertText() {
-		System.out.println("Alert text: "+driver.switchTo().alert().getText());
+		System.out.println("Alert text: " + driver.switchTo().alert().getText());
 		return driver.switchTo().alert().getText();
 	}
-	
-	
+
 	public static void identifyGenericElement(By identifierObject, By genericObject) {
-		
+
 		List<WebElement> products = driver.findElements(identifierObject);
-		String[] itemsNeededArray = {"Beetroot", "Tomato", "Potato", "Banana", "Apple", "Raspberry", "Carrot"};
+		String[] itemsNeededArray = { "Beetroot", "Tomato", "Potato", "Banana", "Apple", "Raspberry", "Carrot" };
 		List itemsNeededList = Arrays.asList(itemsNeededArray);
-		
-		for(int i = 0; i<products.size();i++) {
+
+		for (int i = 0; i < products.size(); i++) {
 			String[] product = products.get(i).getText().split("-");
 			String productFormatted = product[0].trim();
-			
-			if(itemsNeededList.contains(productFormatted)) {
+
+			if (itemsNeededList.contains(productFormatted)) {
 				driver.findElements(genericObject).get(i).click();
-				//WebUI.delay(7);
-				System.out.println((i+1)+". "+productFormatted+" Added");
-			}else System.out.println((i+1)+". "+productFormatted+" Not needed");	
+				// WebUI.delay(7);
+				System.out.println((i + 1) + ". " + productFormatted + " Added");
+			} else
+				System.out.println((i + 1) + ". " + productFormatted + " Not needed");
 		}
 	}
-	
+
 	public static boolean verifyElementPresent(By object) {
-		if(driver.findElement(object).isDisplayed()) System.out.println("True "+object+" is present.");
-		else System.out.println("False "+object+" is Not present.");
+		if (driver.findElement(object).isDisplayed())
+			System.out.println("True " + object + " is present.");
+		else
+			System.out.println("False " + object + " is Not present.");
 		return driver.findElement(object).isDisplayed();
 	}
-	
+
 	public static void mouseOver(By object) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(driver.findElement(object)).build().perform();
+	}
+
+	public static void doubleClicIntoText(By object, String text) {
+
+		Actions actions = new Actions(driver);
+		actions.moveToElement(driver.findElement(object)).click().keyDown(Keys.SHIFT).sendKeys(text).doubleClick()
+				.build().perform();
+	}
+
+	public static void clicAndHold(By object) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(driver.findElement(object)).clickAndHold().build().perform();
+	}
+	
+	public static void rightClic(By object) {
 		
 		Actions actions = new Actions(driver);
-		actions.moveToElement(driver.findElement(object)).build().perform();;;
+		actions.contextClick(driver.findElement(object)).build().perform();
 		
+	}
+	
+	public static void useKeyboard(Keys key) {
+		Actions actions = new Actions(driver);
+		actions.keyDown(key).build().perform();;
 	}
 
 }
