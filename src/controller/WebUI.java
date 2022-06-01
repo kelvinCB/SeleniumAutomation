@@ -15,8 +15,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import constants.StringConstants;
 
@@ -26,36 +30,32 @@ public class WebUI {
 	private static JavascriptExecutor js;
 
 	public static void initializeBrowser(String browser) {
-
+		
 		switch (browser) {
 		case "OPERA":
 			System.setProperty(StringConstants.OPERA_KEY_DRIVER, StringConstants.OPERA_BROWSER_DRIVER);
 			driver = new OperaDriver();
-			implicitWait(10);
 			System.out.println("OPERA was initialized!");
 			break;
 		case "CHROME":
 			System.setProperty(StringConstants.CHROME_KEY_DRIVER, StringConstants.CHROME_BROWSER_DRIVER);
 			driver = new ChromeDriver();
-			implicitWait(10);
 			System.out.println("CHROME was initialized!");
 			break;
 		case "FIREFOX":
 			System.setProperty(StringConstants.FIREFOX_KEY_DRIVER, StringConstants.FIREFOX_BROWSER_DRIVER);
 			driver = new FirefoxDriver();
-			implicitWait(10);
 			System.out.println("FIREFOX was initialized!");
 			break;
 		case "EDGE":
 			System.setProperty(StringConstants.EDGE_KEY_DRIVER, StringConstants.EDGE_BROWSER_DRIVER);
 			driver = new EdgeDriver();
-			implicitWait(10);
 			System.out.println("EDGE was initialized!");
 			break;
 		default:
-			implicitWait(10);
 			System.out.println("Cannot Open Browser with that key or driver");
 		}
+		implicitWait(5);
 
 	}
 
@@ -133,6 +133,10 @@ public class WebUI {
 	}
 
 	public static void delay(int seconds) {
+		
+	//	WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+	//	w.until(ExpectedConditions.visibilityOfElementLocated(null));
+		
 		try {
 			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {
@@ -143,6 +147,7 @@ public class WebUI {
 
 	public static void implicitWait(int seconds) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
+		System.out.println("Implicit Wait is: "+seconds+ " seconds.");
 	}
 
 	public static void scrollToObject(By object) {
@@ -258,6 +263,19 @@ public class WebUI {
 				System.out.println((i+1)+". "+productFormatted+" Added");
 			}else System.out.println((i+1)+". "+productFormatted+" Not needed");	
 		}
+	}
+	
+	public static boolean verifyElementPresent(By object) {
+		if(driver.findElement(object).isDisplayed()) System.out.println("True "+object+" is present.");
+		else System.out.println("False "+object+" is Not present.");
+		return driver.findElement(object).isDisplayed();
+	}
+	
+	public static void mouseOver(By object) {
+		
+		Actions actions = new Actions(driver);
+		actions.moveToElement(driver.findElement(object)).build().perform();;;
+		
 	}
 
 }
