@@ -2,6 +2,7 @@ package controller;
 
 import java.awt.Toolkit;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -238,6 +239,25 @@ public class WebUI {
 	public static String getAlertText() {
 		System.out.println("Alert text: "+driver.switchTo().alert().getText());
 		return driver.switchTo().alert().getText();
+	}
+	
+	
+	public static void identifyGenericElement(By identifierObject, By genericObject) {
+		
+		List<WebElement> products = driver.findElements(identifierObject);
+		String[] itemsNeededArray = {"Beetroot", "Tomato", "Potato", "Banana", "Apple", "Raspberry", "Carrot"};
+		List itemsNeededList = Arrays.asList(itemsNeededArray);
+		
+		for(int i = 0; i<products.size();i++) {
+			String[] product = products.get(i).getText().split("-");
+			String productFormatted = product[0].trim();
+			
+			if(itemsNeededList.contains(productFormatted)) {
+				driver.findElements(genericObject).get(i).click();
+				//WebUI.delay(7);
+				System.out.println((i+1)+". "+productFormatted+" Added");
+			}else System.out.println((i+1)+". "+productFormatted+" Not needed");	
+		}
 	}
 
 }

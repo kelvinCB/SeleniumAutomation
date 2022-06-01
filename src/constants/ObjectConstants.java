@@ -71,4 +71,14 @@ public class ObjectConstants {
 	public static final By ALERT				 			= By.id("alertbtn");
 	public static final By CONFIRM				 			= By.id("confirmbtn");
 	
+	/**********************************/
+	/** SHOPPING CART  / GREEN KART  **/
+	/**********************************/
+	
+	public static final By CART_PRODUCTS					= By.cssSelector("h4.product-name");
+	public static final By ADD_TO_CART						= By.xpath("//div[@class='product-action']");
+	public static final By SHOPPING_CART					= By.cssSelector("img[alt='Cart']");
+	public static final By PROCEED_TO_CHECKOUT				= By.xpath("//button[text()='PROCEED TO CHECKOUT']");
+	public static final By PLACE_ORDER						= By.xpath("//button[.='Place Order']");
+	
 }
