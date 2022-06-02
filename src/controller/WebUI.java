@@ -281,6 +281,11 @@ public class WebUI {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(driver.findElement(object)).build().perform();
 	}
+	
+	public static void dragAndDrop(By source, By target) {
+		Actions actions = new Actions(driver);
+		actions.dragAndDrop(driver.findElement(source), driver.findElement(target)).build().perform();;
+	}
 
 	public static void doubleClicIntoText(By object, String text) {
 
@@ -333,6 +338,10 @@ public class WebUI {
 			System.out.println("Tab not detected!");
 		}
 		
+	}
+	
+	public static void switchToFrame(By object) {
+		driver.switchTo().frame(driver.findElement(object));
 	}
 
 }

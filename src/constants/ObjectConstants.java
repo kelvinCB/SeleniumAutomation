@@ -91,8 +91,26 @@ public class ObjectConstants {
 	public static final By HELLO_SIGN_IN					= By.id("nav-link-accountList-nav-line-1");
 	public static final By SEARCH_BAR						= By.cssSelector("input[id*='searchtextbox']");
 	
+	/***********************************/
+	/** SWITCH TAB  / LOGIN PRACTISE  **/
+	/***********************************/
 	
 	public static final By NEW_TAB_LINK						= By.className("blinkingText");
 	public static final By FEATURED_COURSES					= By.xpath("//h2[normalize-space()='Featured Courses']");
 	public static final By USERNAME2						= By.id("username");
+	public static final By MULTIPLE_WINDOWS					= By.xpath("//a[normalize-space()='Multiple Windows']");
+	public static final By CLIC_HERE						= By.xpath("//a[normalize-space()='Click Here']");
+	public static final By NEW_WINDOW_TEXT					= By.xpath("//h3[normalize-space()='New Window']");
+	public static final By OPENING_NEW_WINDOW_TEXT			= By.xpath("//h3[normalize-space()='Opening a new window']");
+	
+	/******************************/
+	/** FRAMES  / DRAG AND DROP  **/
+	/******************************/
+	
+	public static final By DROPPABLE_FRAME					= By.cssSelector("iframe[class='demo-frame']");
+	public static final By DRAG_OBJECT						= By.xpath("//p[.='Drag me to my target']");
+	public static final By DROP_HERE_TEXT					= By.xpath("//p[normalize-space()='Drop here']");
+	public static final By DROPPED_TEXT						= By.cssSelector("div[id='droppable'] p");
+	
+	
 }
