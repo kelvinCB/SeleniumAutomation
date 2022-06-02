@@ -352,5 +352,11 @@ public class WebUI {
 		WebElement footerdriver = driver.findElement(objectSection);
 		return footerdriver.findElements(element).size();
 	}
+	
+	public static String getPageTitle() {
+		System.out.println("Title: "+driver.getTitle());
+		return driver.getTitle();
+		
+	}
 
 }
