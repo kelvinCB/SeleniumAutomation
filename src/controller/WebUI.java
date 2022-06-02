@@ -343,5 +343,14 @@ public class WebUI {
 	public static void switchToFrame(By object) {
 		driver.switchTo().frame(driver.findElement(object));
 	}
+	
+	public static int getElementsCount(By object) {
+		return driver.findElements(object).size();	
+	}
+	
+	public static int getElementsCountInSection(By objectSection, By element) {
+		WebElement footerdriver = driver.findElement(objectSection);
+		return footerdriver.findElements(element).size();
+	}
 
 }

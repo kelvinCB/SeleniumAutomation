@@ -5,6 +5,15 @@ import org.openqa.selenium.By;
 public class ObjectConstants {
 	
 	/**************************/
+	/** COMMONS  / ELEMENTS  **/
+	/**************************/
+	
+	public static final By LINKS_IN_A_PAGE					= By.tagName("a");
+	public static final By BUTTONS_IN_A_PAGE				= By.tagName("button");
+	public static final By TEXTBOX_IN_A_PAGE				= By.tagName("input");
+	
+	
+	/**************************/
 	/** ORANGE HRM  / Login  **/
 	/**************************/
 	
@@ -29,6 +38,7 @@ public class ObjectConstants {
 	public static final By WEB_TABLES						= By.xpath("//span[normalize-space()='Web Tables']");
 	public static final By BUTTONS							= By.xpath("//span[normalize-space()='Buttons']");
 	public static final By LINKS							= By.xpath("//span[normalize-space()='Links']");
+	
 	public static final By BROKEN_LINKS_IMAGES  			= By.xpath("//span[normalize-space()='Broken Links - Images']");
 	public static final By UPLOAD_AND_DOWNLOADS				= By.xpath("//span[normalize-space()='Upload and Download']");
 	public static final By DYNAMIC_PROPERTIES				= By.xpath("//span[normalize-space()='Dynamic Properties']");
@@ -70,6 +80,7 @@ public class ObjectConstants {
 	public static final By ENTER_NAME				 		= By.id("name");
 	public static final By ALERT				 			= By.id("alertbtn");
 	public static final By CONFIRM				 			= By.id("confirmbtn");
+	public static final By AUTOMATION_FOOTER				= By.id("gf-BIG");
 	
 	/**********************************/
 	/** SHOPPING CART  / GREEN KART  **/
