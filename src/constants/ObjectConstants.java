@@ -90,4 +90,9 @@ public class ObjectConstants {
 		
 	public static final By HELLO_SIGN_IN					= By.id("nav-link-accountList-nav-line-1");
 	public static final By SEARCH_BAR						= By.cssSelector("input[id*='searchtextbox']");
+	
+	
+	public static final By NEW_TAB_LINK						= By.className("blinkingText");
+	public static final By FEATURED_COURSES					= By.xpath("//h2[normalize-space()='Featured Courses']");
+	public static final By USERNAME2						= By.id("username");
 }

@@ -15,6 +15,8 @@ public class StringConstants {
 	public static final String DEMO_QA_URL									= "https://demoqa.com/";
 	public static final String ORANGE_HRM     								= "https://opensource-demo.orangehrmlive.com/index.php/auth/login";
 
-	
+	public static final String PARENTID										= "parentID";
+	public static final String CHILDID										= "childID";
+	public static final String SUBCHILDID									= "subchildID";
 	
 }

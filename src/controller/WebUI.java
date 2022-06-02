@@ -3,7 +3,9 @@ package controller;
 import java.awt.Toolkit;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -302,6 +304,35 @@ public class WebUI {
 	public static void useKeyboard(Keys key) {
 		Actions actions = new Actions(driver);
 		actions.keyDown(key).build().perform();;
+	}
+	
+	public static void moveToTab(String tab) {
+		
+		Set<String> windows = driver.getWindowHandles(); //[parentID, childID, subchildID]
+		Iterator<String> it = windows.iterator();
+		String parentID = it.next();
+		String childID = it.next();
+		String subchildID = "";
+		if(windows.size()==3) subchildID = it.next();
+							
+		switch (tab) {
+		case StringConstants.PARENTID:
+			driver.switchTo().window(parentID);
+			System.out.println("Focus was switched to Parent tab");
+			break;
+		case StringConstants.CHILDID:
+			driver.switchTo().window(childID);
+			System.out.println("Focus was switched to Child tab");
+			break;
+		case StringConstants.SUBCHILDID:
+			driver.switchTo().window(subchildID);
+			System.out.println("Focus was switched to SubChild tab");
+			break;
+		
+		default:
+			System.out.println("Tab not detected!");
+		}
+		
 	}
 
 }
