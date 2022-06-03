@@ -11,6 +11,7 @@ public class ObjectConstants {
 	public static final By LINKS_IN_A_PAGE					= By.tagName("a");
 	public static final By BUTTONS_IN_A_PAGE				= By.tagName("button");
 	public static final By TEXTBOX_IN_A_PAGE				= By.tagName("input");
+	public static final By CELLS_IN_A_PAGE					= By.tagName("td");
 	
 	
 	/**************************/
@@ -81,6 +82,8 @@ public class ObjectConstants {
 	public static final By ALERT				 			= By.id("alertbtn");
 	public static final By CONFIRM				 			= By.id("confirmbtn");
 	public static final By AUTOMATION_FOOTER				= By.id("gf-BIG");
+	public static final By TABLE_FIXED_HEADER				= By.xpath("//div[@class='right-align'] //tbody");
+	public static final By TOTAL_AMOUNT_COLLECTED			= By.cssSelector(".totalAmount");
 	
 	/**********************************/
 	/** SHOPPING CART  / GREEN KART  **/

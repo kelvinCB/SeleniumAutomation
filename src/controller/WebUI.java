@@ -356,7 +356,25 @@ public class WebUI {
 	public static String getPageTitle() {
 		System.out.println("Title: "+driver.getTitle());
 		return driver.getTitle();
-		
+	}
+	
+	public static boolean isNumeric(String strNum) {
+	    if (strNum == null) {
+	        return false;
+	    }
+	    try {
+	        double d = Double.parseDouble(strNum);
+	    } catch (NumberFormatException nfe) {
+	        return false;
+	    }
+	    return true;
+	}
+	
+	public static String extractOnlyNumbers(String number){
+
+		String textToNumber = number.replaceAll("[^0-9]", "");
+
+		return textToNumber;
 	}
 
 }

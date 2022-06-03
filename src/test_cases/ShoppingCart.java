@@ -1,6 +1,7 @@
 package test_cases;
 
 import constants.ObjectConstants;
+import constants.StringConstants;
 import controller.WebUI;
 
 public class ShoppingCart {
@@ -9,7 +10,7 @@ public class ShoppingCart {
 		// TODO Auto-generated method stub
 		
 		WebUI.initializeBrowser("FIREFOX");
-		WebUI.openBrowser("https://rahulshettyacademy.com/seleniumPractise/");
+		WebUI.openBrowser(StringConstants.GREEN_KART);
 		WebUI.maximizedWindow();
 
 		

@@ -1,6 +1,7 @@
 package test_cases;
 
 import constants.ObjectConstants;
+import constants.StringConstants;
 import controller.WebUI;
 
 public class FlightBooking {
@@ -10,7 +11,7 @@ public class FlightBooking {
 		
 		
 		WebUI.initializeBrowser("CHROME");
-		WebUI.openBrowser("https://rahulshettyacademy.com/dropdownsPractise/");
+		WebUI.openBrowser(StringConstants.FLIGHT_RAHUL);
 		WebUI.maximizedWindow();
 		WebUI.selectOptionByIndex(ObjectConstants.CURRENCY_DROPDOWN, 2);
 		WebUI.selectOptionByLabel(ObjectConstants.CURRENCY_DROPDOWN, "USD");

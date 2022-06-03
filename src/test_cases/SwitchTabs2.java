@@ -10,7 +10,7 @@ public class SwitchTabs2 {
 		// TODO Auto-generated method stub
 
 		WebUI.initializeBrowser("FIREFOX");
-		WebUI.openBrowser("https://the-internet.herokuapp.com");
+		WebUI.openBrowser(StringConstants.INTERNET_ADVANCED_AUTOMATION);
 		WebUI.maximizedWindow();
 		WebUI.clic(ObjectConstants.MULTIPLE_WINDOWS);
 		WebUI.clic(ObjectConstants.CLIC_HERE);

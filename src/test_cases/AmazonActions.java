@@ -2,6 +2,7 @@ package test_cases;
 
 
 import constants.ObjectConstants;
+import constants.StringConstants;
 import controller.WebUI;
 
 public class AmazonActions {
@@ -10,7 +11,7 @@ public class AmazonActions {
 		// TODO Auto-generated method stub
 
 		WebUI.initializeBrowser("FIREFOX");
-		WebUI.openBrowser("https://www.amazon.com");
+		WebUI.openBrowser(StringConstants.AMAZON);
 		WebUI.maximizedWindow();
 		WebUI.mouseOver(ObjectConstants.HELLO_SIGN_IN);
 		WebUI.delay(3);

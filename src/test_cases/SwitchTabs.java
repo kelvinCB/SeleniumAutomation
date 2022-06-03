@@ -10,7 +10,7 @@ public class SwitchTabs {
 		// TODO Auto-generated method stub
 		
 		WebUI.initializeBrowser("FIREFOX");
-		WebUI.openBrowser("https://rahulshettyacademy.com/loginpagePractise/#");
+		WebUI.openBrowser(StringConstants.LOGIN_RAHUL);
 		WebUI.maximizedWindow();
 		WebUI.clic(ObjectConstants.NEW_TAB_LINK);
 		WebUI.moveToTab(StringConstants.CHILDID);
