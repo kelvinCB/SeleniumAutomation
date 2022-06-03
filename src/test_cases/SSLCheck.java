@@ -2,7 +2,7 @@ package test_cases;
 
 import java.time.Duration;
 
-import org.openqa.selenium.Proxy;
+//import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -37,6 +37,7 @@ public class SSLCheck {
 		//Chrome
 		ChromeOptions options2 = new ChromeOptions();
 		options2.setAcceptInsecureCerts(true);
+		options2.addArguments("start-maximized");
 		//options2.addExtensions(null);
 //		Proxy proxy = new Proxy();
 //		proxy.setHttpProxy("IPAddress:4488");
@@ -50,7 +51,7 @@ public class SSLCheck {
 		
 		driver2.get(StringConstants.BAD_SSL);
 		System.out.println("Browser was opened in: " + StringConstants.BAD_SSL);
-		driver2.manage().window().maximize();
+	//	driver2.manage().window().maximize();
 		
 		System.out.println("Page title: "+driver2.getTitle());
 		WebUI.soundBeep();

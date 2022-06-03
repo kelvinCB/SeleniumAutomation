@@ -15,14 +15,16 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import constants.StringConstants;
 
@@ -35,21 +37,33 @@ public class WebUI {
 
 		switch (browser) {
 		case "OPERA":
+			OperaOptions options1 = new OperaOptions();
+			options1.setAcceptInsecureCerts(true);
+			options1.addArguments("start-maximized");
 			System.setProperty(StringConstants.OPERA_KEY_DRIVER, StringConstants.OPERA_BROWSER_DRIVER);
-			driver = new OperaDriver();
+			driver = new OperaDriver(options1);
 			System.out.println("OPERA was initialized!");
 			break;
 		case "CHROME":
+			ChromeOptions options2 = new ChromeOptions();
+			options2.setAcceptInsecureCerts(true);
+			options2.addArguments("start-maximized");
 			System.setProperty(StringConstants.CHROME_KEY_DRIVER, StringConstants.CHROME_BROWSER_DRIVER);
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options2);
 			System.out.println("CHROME was initialized!");
 			break;
 		case "FIREFOX":
+			FirefoxOptions options3 = new FirefoxOptions();
+			options3.setAcceptInsecureCerts(true);
+			options3.addArguments("start-maximized");
 			System.setProperty(StringConstants.FIREFOX_KEY_DRIVER, StringConstants.FIREFOX_BROWSER_DRIVER);
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(options3);
 			System.out.println("FIREFOX was initialized!");
 			break;
 		case "EDGE":
+			EdgeOptions options4 = new EdgeOptions();
+			options4.setAcceptInsecureCerts(true);
+			options4.addArguments("start-maximized");
 			System.setProperty(StringConstants.EDGE_KEY_DRIVER, StringConstants.EDGE_BROWSER_DRIVER);
 			driver = new EdgeDriver();
 			System.out.println("EDGE was initialized!");
