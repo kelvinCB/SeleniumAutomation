@@ -1,17 +1,23 @@
 package controller;
 
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -65,7 +71,7 @@ public class WebUI {
 			options4.setAcceptInsecureCerts(true);
 			options4.addArguments("start-maximized");
 			System.setProperty(StringConstants.EDGE_KEY_DRIVER, StringConstants.EDGE_BROWSER_DRIVER);
-			driver = new EdgeDriver();
+			driver = new EdgeDriver(options4);
 			System.out.println("EDGE was initialized!");
 			break;
 		default:
@@ -390,5 +396,71 @@ public class WebUI {
 
 		return textToNumber;
 	}
+	
+	public static void deleteAllCookies() {
+		driver.manage().deleteAllCookies();
+	}
+	
+	public static void deleteCookie(Cookie cookie) {
+		driver.manage().deleteCookie(cookie);
+	}
+	
+	public static void deleteCookieByname(String cookieName) {
+		driver.manage().deleteCookieNamed(cookieName);
+	}
+	
+	public static void takeScreenShot(WebDriver webdriver,String fileWithPath){
+
+        //Convert web driver object to TakeScreenshot
+
+        TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+
+        //Call getScreenshotAs method to create image file
+
+        File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+
+        //Move image file to new destination
+
+        File DestFile=new File(fileWithPath);
+
+        //Copy file at destination
+
+        try {
+			FileUtils.copyFile(SrcFile, DestFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        System.out.println("Screenshot taken");
+
+    }
+	
+	public static void takeScreenShot(String fileWithPath){
+
+        //Convert web driver object to TakeScreenshot
+
+        TakesScreenshot scrShot =((TakesScreenshot)driver);
+
+        //Call getScreenshotAs method to create image file
+
+        File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+
+        //Move image file to new destination
+
+        File DestFile=new File(fileWithPath);
+
+        //Copy file at destination
+
+        try {
+			FileUtils.copyFile(SrcFile, DestFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        System.out.println("Screenshot taken");
+
+    }
 
 }

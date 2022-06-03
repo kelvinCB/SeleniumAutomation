@@ -2,6 +2,7 @@ package test_cases;
 
 import java.time.Duration;
 
+
 //import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -56,6 +57,8 @@ public class SSLCheck {
 		System.out.println("Page title: "+driver2.getTitle());
 		WebUI.soundBeep();
 		//driver2.quit();
+		
+
 		
 
 	}
