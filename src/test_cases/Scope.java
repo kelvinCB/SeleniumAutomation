@@ -19,8 +19,8 @@ public class Scope {
 		// TODO Auto-generated method stub
 		
 		//Get amount of links in a web page
-	  //  WebUI.initializeBrowser("CHROME");
-		for(int j = 0; j<100;j++) {
+	    // WebUI.initializeBrowser("CHROME");
+
 		System.setProperty(StringConstants.FIREFOX_KEY_DRIVER, StringConstants.FIREFOX_BROWSER_DRIVER);
 		WebDriver driver = new FirefoxDriver();
 		System.out.println("FIREFOX was initialized!");
@@ -47,10 +47,10 @@ public class Scope {
 		WebElement footerdriver = driver.findElement(ObjectConstants.AUTOMATION_FOOTER);
 		int links =  footerdriver.findElements(ObjectConstants.LINKS_IN_A_PAGE).size();
 		
-		for(int i =1;i<links;i++) {
+		for(int i =0;i<links;i++) {
 			String clickOnLinks = Keys.chord(Keys.CONTROL, Keys.ENTER);
 			footerdriver.findElements(ObjectConstants.LINKS_IN_A_PAGE).get(i).sendKeys(clickOnLinks);	
-			WebUI.delay(2);
+			WebUI.delay(1);
 		}
 		
 		//Get title of every Tab
@@ -61,14 +61,12 @@ public class Scope {
 			driver.switchTo().window(it.next());
 			System.out.println("Title "+i+": "+driver.getTitle());
 			i++;
-			WebUI.delay(2);
 		}
 		
 		WebUI.soundBeep();
 		driver.quit();
 		System.out.println("Browser was closed!");
 
-	}
 		
 	}
 

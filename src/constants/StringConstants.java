@@ -18,6 +18,7 @@ public class StringConstants {
 	public static final String AMAZON										= "https://www.amazon.com";
 	public static final String INTERNET_ADVANCED_AUTOMATION				 	= "https://the-internet.herokuapp.com";
 	public static final String JQUERY_TOP_AUTOMATION						= "http://jqueryui.com/droppable/";
+	public static final String BAD_SSL										= "https://expired.badssl.com/";
 	public static final String AUTOMATION_PRACTICE_RAHUL					= "https://rahulshettyacademy.com/AutomationPractice/";
 	public static final String FLIGHT_RAHUL									= "https://rahulshettyacademy.com/dropdownsPractise/";
 	public static final String GREEN_KART									= "https://rahulshettyacademy.com/seleniumPractise/";
