@@ -84,6 +84,7 @@ public class ObjectConstants {
 	public static final By AUTOMATION_FOOTER				= By.id("gf-BIG");
 	public static final By TABLE_FIXED_HEADER				= By.xpath("//div[@class='right-align'] //tbody");
 	public static final By TOTAL_AMOUNT_COLLECTED			= By.cssSelector(".totalAmount");
+	public static final By LINKS_IN_FOOTER					= By.cssSelector("li[class='gf-li'] a");
 	
 	/**********************************/
 	/** SHOPPING CART  / GREEN KART  **/
@@ -97,6 +98,11 @@ public class ObjectConstants {
 	public static final By APPLY_CODE 						= By.xpath("//button[@class='promoBtn']");
 	public static final By CODE_APPLIED						= By.cssSelector("span[class='promoInfo']");
 	public static final By PLACE_ORDER						= By.xpath("//button[.='Place Order']");
+	public static final By TOP_DEALS						= By.xpath("//a[text()='Top Deals']");
+	public static final By FRUIT_NAME_HEADER				= By.xpath("//span[contains(text(), 'fruit name')]");
+	public static final By TOP_DEALS_TABLE					= By.xpath("//table[@class='table table-bordered'] //tbody");
+	public static final By FRUIT_NAME_COLUMN				= By.xpath("//tr/td[1]");
+	public static final By NEXT_PAGE_TABLE					= By.cssSelector("[aria-label='Next']");
 	
 	/************************/
 	/** AMAZON  / ACTIONS  **/

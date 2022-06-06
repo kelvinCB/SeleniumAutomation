@@ -27,8 +27,8 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.opera.OperaOptions;
+//import org.openqa.selenium.opera.OperaDriver;
+//import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.support.ui.Select;
 
 
@@ -43,13 +43,14 @@ public class WebUI {
 
 		switch (browser) {
 		case "OPERA":
-			OperaOptions options1 = new OperaOptions();
-			options1.setAcceptInsecureCerts(true);
-			options1.addArguments("start-maximized");
-			System.setProperty(StringConstants.OPERA_KEY_DRIVER, StringConstants.OPERA_BROWSER_DRIVER);
-			driver = new OperaDriver(options1);
-			System.out.println("OPERA was initialized!");
-			break;
+//			OperaOptions options1 = new OperaOptions();
+//			options1.setAcceptInsecureCerts(true);
+//			options1.addArguments("start-maximized");
+//			System.setProperty(StringConstants.OPERA_KEY_DRIVER, StringConstants.OPERA_BROWSER_DRIVER);
+//			driver = new OperaDriver(options1);
+//			System.out.println("OPERA was initialized!");
+//			break;
+			System.out.println("OPERA is deprecated");
 		case "CHROME":
 			ChromeOptions options2 = new ChromeOptions();
 			options2.setAcceptInsecureCerts(true);
@@ -160,6 +161,7 @@ public class WebUI {
 		// w.until(ExpectedConditions.visibilityOfElementLocated(null));
 
 		try {
+			System.out.println("Delay: "+seconds+" seconds");
 			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -274,7 +276,7 @@ public class WebUI {
 
 		List<WebElement> products = driver.findElements(identifierObject);
 		String[] itemsNeededArray = { "Beetroot", "Tomato", "Potato", "Banana", "Apple", "Raspberry", "Carrot" };
-		List itemsNeededList = Arrays.asList(itemsNeededArray);
+		List<String> itemsNeededList = Arrays.asList(itemsNeededArray);
 
 		for (int i = 0; i < products.size(); i++) {
 			String[] product = products.get(i).getText().split("-");
@@ -384,6 +386,7 @@ public class WebUI {
 	    }
 	    try {
 	        double d = Double.parseDouble(strNum);
+	        System.out.println(d);
 	    } catch (NumberFormatException nfe) {
 	        return false;
 	    }
@@ -462,5 +465,9 @@ public class WebUI {
         System.out.println("Screenshot taken");
 
     }
+	
+	public static String getAttribute(By object, String attribute) {
+		return driver.findElement(object).getAttribute(attribute);
+	}
 
 }
