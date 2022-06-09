@@ -56,7 +56,7 @@ public class SSLCheck {
 		
 		System.out.println("Page title: "+driver2.getTitle());
 		WebUI.soundBeep();
-		//driver2.quit();
+		driver2.quit();
 		
 
 		

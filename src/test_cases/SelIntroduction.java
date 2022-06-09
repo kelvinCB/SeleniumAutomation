@@ -18,7 +18,6 @@ public class SelIntroduction {
 		WebUI.closeBrowser();
 		
 
-		
 	}
 
 }
