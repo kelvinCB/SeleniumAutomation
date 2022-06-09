@@ -17,10 +17,10 @@ public class ShoppingCart {
 		//Clic in generics products
 		WebUI.identifyGenericElement(ObjectConstants.CART_PRODUCTS, ObjectConstants.ADD_TO_CART);
 		
-		WebUI.clic(ObjectConstants.SHOPPING_CART);
-		WebUI.clic(ObjectConstants.PROCEED_TO_CHECKOUT);
+		WebUI.click(ObjectConstants.SHOPPING_CART);
+		WebUI.click(ObjectConstants.PROCEED_TO_CHECKOUT);
 		WebUI.setText(ObjectConstants.PROMO_CODE, "rahulshettyacademy");
-		WebUI.clic(ObjectConstants.APPLY_CODE);
+		WebUI.click(ObjectConstants.APPLY_CODE);
 		WebUI.verifyElementPresent(ObjectConstants.CODE_APPLIED);
 		WebUI.soundBeep();
 		WebUI.closeBrowser();

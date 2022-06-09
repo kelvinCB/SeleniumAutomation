@@ -39,7 +39,7 @@ public class WebUI {
 	private static WebDriver driver;
 	private static JavascriptExecutor js;
 
-	public static void initializeBrowser(String browser) {
+	public static WebDriver initializeBrowser(String browser) {
 
 		switch (browser) {
 		case "OPERA":
@@ -79,6 +79,7 @@ public class WebUI {
 			System.out.println("Cannot Open Browser with that key or driver");
 		}
 		implicitWait(5);
+		return driver;	
 
 	}
 
@@ -131,7 +132,7 @@ public class WebUI {
 		driver.manage().window().setSize(d);
 	}
 
-	public static void clic(By object) {
+	public static void click(By object) {
 		driver.findElement(object).click();
 		System.out.println("Element: " + object + " clicked");
 	}
@@ -146,9 +147,9 @@ public class WebUI {
 		return driver.findElement(object).getText();
 	}
 
-	public static void doubleClic(By object) {
-		clic(object);
-		clic(object);
+	public static void doubleClick(By object) {
+		click(object);
+		click(object);
 	}
 
 	public static void clear(By object) {
@@ -309,19 +310,19 @@ public class WebUI {
 		actions.dragAndDrop(driver.findElement(source), driver.findElement(target)).build().perform();;
 	}
 
-	public static void doubleClicIntoText(By object, String text) {
+	public static void doubleClickIntoText(By object, String text) {
 
 		Actions actions = new Actions(driver);
 		actions.moveToElement(driver.findElement(object)).click().keyDown(Keys.SHIFT).sendKeys(text).doubleClick()
 				.build().perform();
 	}
 
-	public static void clicAndHold(By object) {
+	public static void clickAndHold(By object) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(driver.findElement(object)).clickAndHold().build().perform();
 	}
 	
-	public static void rightClic(By object) {
+	public static void rightClick(By object) {
 		
 		Actions actions = new Actions(driver);
 		actions.contextClick(driver.findElement(object)).build().perform();

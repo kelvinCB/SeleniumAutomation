@@ -13,8 +13,9 @@ public class SelIntroduction {
 		WebUI.maximizedWindow();
 		WebUI.setText(ObjectConstants.USERNAME, "Admin");
 		WebUI.setText(ObjectConstants.PASSWORD, "admin123");
-		WebUI.clic(ObjectConstants.LOGIN);
+		WebUI.click(ObjectConstants.LOGIN);
 		WebUI.soundBeep();
+		WebUI.closeBrowser();
 		
 
 		

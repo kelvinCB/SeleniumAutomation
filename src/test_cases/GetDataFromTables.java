@@ -19,16 +19,10 @@ public class GetDataFromTables {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.setProperty(StringConstants.FIREFOX_KEY_DRIVER, StringConstants.FIREFOX_BROWSER_DRIVER);
-		WebDriver driver = new FirefoxDriver();
-		System.out.println("FIREFOX was initialized!");
+		WebDriver driver = WebUI.initializeBrowser("FIREFOX");
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		System.out.println("Implicit Wait is: " + 10 + " seconds.");
-		
-		driver.get(StringConstants.AUTOMATION_PRACTICE_RAHUL);
-		System.out.println("Browser was opened in: " + StringConstants.AUTOMATION_PRACTICE_RAHUL);
-		driver.manage().window().maximize();
+		WebUI.openBrowser(StringConstants.AUTOMATION_PRACTICE_RAHUL);
+		WebUI.maximizedWindow();
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(ObjectConstants.TABLE_FIXED_HEADER);
@@ -60,7 +54,7 @@ public class GetDataFromTables {
 		Assert.assertEquals(totalAmount+"", WebUI.extractOnlyNumbers(driver.findElement(ObjectConstants.TOTAL_AMOUNT_COLLECTED).getText()));
 		
 		WebUI.soundBeep();
-		driver.quit();
+		WebUI.closeBrowser();
 		
 	}
 

@@ -102,6 +102,7 @@ public class ObjectConstants {
 	public static final By FRUIT_NAME_HEADER				= By.xpath("//span[contains(text(), 'fruit name')]");
 	public static final By TOP_DEALS_TABLE					= By.xpath("//table[@class='table table-bordered'] //tbody");
 	public static final By FRUIT_NAME_COLUMN				= By.xpath("//tr/td[1]");
+	public static final By SEARCH_FRUIT						= By.id("search-field");
 	public static final By NEXT_PAGE_TABLE					= By.cssSelector("[aria-label='Next']");
 	
 	/************************/
@@ -116,7 +117,7 @@ public class ObjectConstants {
 	/***********************************/
 	
 	public static final By NEW_TAB_LINK						= By.className("blinkingText");
-	public static final By FEATURED_COURSES					= By.xpath("//h2[normalize-space()='Featured Courses']");
+	public static final By MENTOSHIP						= By.linkText("Mentorship");
 	public static final By USERNAME2						= By.id("username");
 	public static final By MULTIPLE_WINDOWS					= By.xpath("//a[normalize-space()='Multiple Windows']");
 	public static final By CLIC_HERE						= By.xpath("//a[normalize-space()='Click Here']");

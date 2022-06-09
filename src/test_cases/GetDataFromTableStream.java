@@ -1,18 +1,15 @@
 package test_cases;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.Iterator;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
 import constants.ObjectConstants;
@@ -23,22 +20,13 @@ public class GetDataFromTableStream {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 
-		System.setProperty(StringConstants.CHROME_KEY_DRIVER, StringConstants.CHROME_BROWSER_DRIVER);
-		WebDriver driver = new ChromeDriver();
-		System.out.println("CHROME was initialized!");
+		WebDriver driver = WebUI.initializeBrowser("CHROME");
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		System.out.println("Implicit Wait is: " + 5 + " seconds.");
-		
-		driver.get(StringConstants.GREEN_KART);
-		System.out.println("Browser was opened in: " + StringConstants.GREEN_KART);
-		driver.manage().window().maximize();
-		
-		driver.findElement(ObjectConstants.TOP_DEALS).click();
-		System.out.println("Element: " + ObjectConstants.TOP_DEALS + " clicked");
-		
+		WebUI.openBrowser(StringConstants.GREEN_KART);
+		WebUI.maximizedWindow();
+		WebUI.click(ObjectConstants.TOP_DEALS);
+				
 		//Switch to new childWindow
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> it = windows.iterator();
@@ -47,8 +35,7 @@ public class GetDataFromTableStream {
 		driver.switchTo().window(childID);
 		
 		//Click on column fruit name to sort it
-		driver.findElement(ObjectConstants.FRUIT_NAME_HEADER).click();
-		System.out.println("Element: " + ObjectConstants.FRUIT_NAME_HEADER + " clicked");
+		WebUI.click(ObjectConstants.FRUIT_NAME_HEADER);
 		
 		//Get all Web table elements in a WebElement list -> Element list
 		List<WebElement> elementList = driver.findElements(ObjectConstants.FRUIT_NAME_COLUMN);
@@ -80,10 +67,8 @@ public class GetDataFromTableStream {
 		
 			}while(price.size()<1); 
 		 
-		
-		
 		WebUI.soundBeep();
-		//driver.quit();
+		WebUI.closeBrowser();
 
 //		
 //		//Getting all data from table and using only numbers in the table

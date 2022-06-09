@@ -15,11 +15,12 @@ public class AmazonActions {
 		WebUI.maximizedWindow();
 		WebUI.mouseOver(ObjectConstants.HELLO_SIGN_IN);
 		WebUI.delay(3);
-		WebUI.clic(ObjectConstants.SEARCH_BAR);
+		WebUI.click(ObjectConstants.SEARCH_BAR);
 		WebUI.setText(ObjectConstants.SEARCH_BAR, "AIRPODS");
-		WebUI.doubleClicIntoText(ObjectConstants.SEARCH_BAR, "airdots");
-		WebUI.rightClic(ObjectConstants.HELLO_SIGN_IN);
+		WebUI.doubleClickIntoText(ObjectConstants.SEARCH_BAR, "airdots");
+		WebUI.rightClick(ObjectConstants.HELLO_SIGN_IN);
 		WebUI.soundBeep();
+		WebUI.closeBrowser();
 		
 	}
 
