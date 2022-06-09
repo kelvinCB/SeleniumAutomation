@@ -11,7 +11,7 @@ public class Miscelleanous {
 		WebUI.initializeBrowser("EDGE");
 		WebUI.openBrowser(StringConstants.GOOGLE);
 		WebUI.deleteAllCookies();
-		for(int i = 0; i<10; i++) WebUI.takeScreenShot("Files/screenshot"+i+".png");
+		for(int i = 0; i<10; i++) WebUI.takeScreenShot("Files/screenshots/screenshot"+i+".png");
 		WebUI.soundBeep();
 		WebUI.closeBrowser();
 		

@@ -133,5 +133,14 @@ public class ObjectConstants {
 	public static final By DROP_HERE_TEXT					= By.xpath("//p[normalize-space()='Drop here']");
 	public static final By DROPPED_TEXT						= By.cssSelector("div[id='droppable'] p");
 	
+	/******************************/
+	/** FRAMES  / DRAG AND DROP  **/
+	/******************************/
+	
+	public static final By NAME_LABEL						= By.cssSelector("[name='name']");
+	public static final By EMAIL_LABEL						= By.cssSelector("[name='email']");
+	public static final By PASSWORD_LABEL					= By.cssSelector("[type='password']");
+	
+	
 	
 }
