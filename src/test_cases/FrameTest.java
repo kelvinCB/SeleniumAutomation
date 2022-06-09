@@ -3,6 +3,7 @@ package test_cases;
 import org.testng.Assert;
 
 import constants.ObjectConstants;
+import constants.StringConstants;
 import controller.WebUI;
 
 public class FrameTest {
@@ -11,7 +12,7 @@ public class FrameTest {
 		// TODO Auto-generated method stub
 		
 		WebUI.initializeBrowser("FIREFOX");
-		WebUI.openBrowser("http://jqueryui.com/droppable/");
+		WebUI.openBrowser(StringConstants.JQUERY_TOP_AUTOMATION);
 		WebUI.maximizedWindow();
 		WebUI.switchToFrame(ObjectConstants.DROPPABLE_FRAME);
 		WebUI.verifyElementPresent(ObjectConstants.DROP_HERE_TEXT);

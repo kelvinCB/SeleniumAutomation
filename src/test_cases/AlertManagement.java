@@ -1,6 +1,7 @@
 package test_cases;
 
 import constants.ObjectConstants;
+import constants.StringConstants;
 import controller.WebUI;
 
 public class AlertManagement {
@@ -9,14 +10,14 @@ public class AlertManagement {
 		// TODO Auto-generated method stub
 
 		WebUI.initializeBrowser("EDGE");
-		WebUI.openBrowser("https://rahulshettyacademy.com/AutomationPractice/");
+		WebUI.openBrowser(StringConstants.AUTOMATION_PRACTICE_RAHUL);
 		WebUI.maximizedWindow();
 		WebUI.setText(ObjectConstants.ENTER_NAME, "Alta Gama, Nuevo Rico");
-		WebUI.clic(ObjectConstants.ALERT);
+		WebUI.click(ObjectConstants.ALERT);
 		WebUI.getAlertText();
 		WebUI.acceptAlert();
 		WebUI.setText(ObjectConstants.ENTER_NAME, "Cooperas con los federicos");
-		WebUI.clic(ObjectConstants.CONFIRM);
+		WebUI.click(ObjectConstants.CONFIRM);
 		WebUI.getAlertText();
 		WebUI.dismissAlert();
 		WebUI.soundBeep();

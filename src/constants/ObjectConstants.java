@@ -11,6 +11,7 @@ public class ObjectConstants {
 	public static final By LINKS_IN_A_PAGE					= By.tagName("a");
 	public static final By BUTTONS_IN_A_PAGE				= By.tagName("button");
 	public static final By TEXTBOX_IN_A_PAGE				= By.tagName("input");
+	public static final By CELLS_IN_A_PAGE					= By.tagName("td");
 	
 	
 	/**************************/
@@ -81,6 +82,9 @@ public class ObjectConstants {
 	public static final By ALERT				 			= By.id("alertbtn");
 	public static final By CONFIRM				 			= By.id("confirmbtn");
 	public static final By AUTOMATION_FOOTER				= By.id("gf-BIG");
+	public static final By TABLE_FIXED_HEADER				= By.xpath("//div[@class='right-align'] //tbody");
+	public static final By TOTAL_AMOUNT_COLLECTED			= By.cssSelector(".totalAmount");
+	public static final By LINKS_IN_FOOTER					= By.cssSelector("li[class='gf-li'] a");
 	
 	/**********************************/
 	/** SHOPPING CART  / GREEN KART  **/
@@ -94,6 +98,12 @@ public class ObjectConstants {
 	public static final By APPLY_CODE 						= By.xpath("//button[@class='promoBtn']");
 	public static final By CODE_APPLIED						= By.cssSelector("span[class='promoInfo']");
 	public static final By PLACE_ORDER						= By.xpath("//button[.='Place Order']");
+	public static final By TOP_DEALS						= By.xpath("//a[text()='Top Deals']");
+	public static final By FRUIT_NAME_HEADER				= By.xpath("//span[contains(text(), 'fruit name')]");
+	public static final By TOP_DEALS_TABLE					= By.xpath("//table[@class='table table-bordered'] //tbody");
+	public static final By FRUIT_NAME_COLUMN				= By.xpath("//tr/td[1]");
+	public static final By SEARCH_FRUIT						= By.id("search-field");
+	public static final By NEXT_PAGE_TABLE					= By.cssSelector("[aria-label='Next']");
 	
 	/************************/
 	/** AMAZON  / ACTIONS  **/
@@ -107,7 +117,7 @@ public class ObjectConstants {
 	/***********************************/
 	
 	public static final By NEW_TAB_LINK						= By.className("blinkingText");
-	public static final By FEATURED_COURSES					= By.xpath("//h2[normalize-space()='Featured Courses']");
+	public static final By MENTOSHIP						= By.linkText("Mentorship");
 	public static final By USERNAME2						= By.id("username");
 	public static final By MULTIPLE_WINDOWS					= By.xpath("//a[normalize-space()='Multiple Windows']");
 	public static final By CLIC_HERE						= By.xpath("//a[normalize-space()='Click Here']");
@@ -122,6 +132,15 @@ public class ObjectConstants {
 	public static final By DRAG_OBJECT						= By.xpath("//p[.='Drag me to my target']");
 	public static final By DROP_HERE_TEXT					= By.xpath("//p[normalize-space()='Drop here']");
 	public static final By DROPPED_TEXT						= By.cssSelector("div[id='droppable'] p");
+	
+	/******************************/
+	/** FRAMES  / DRAG AND DROP  **/
+	/******************************/
+	
+	public static final By NAME_LABEL						= By.cssSelector("[name='name']");
+	public static final By EMAIL_LABEL						= By.cssSelector("[name='email']");
+	public static final By PASSWORD_LABEL					= By.cssSelector("[type='password']");
+	
 	
 	
 }

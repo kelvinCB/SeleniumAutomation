@@ -10,10 +10,10 @@ public class SwitchTabs2 {
 		// TODO Auto-generated method stub
 
 		WebUI.initializeBrowser("FIREFOX");
-		WebUI.openBrowser("https://the-internet.herokuapp.com");
+		WebUI.openBrowser(StringConstants.INTERNET_ADVANCED_AUTOMATION);
 		WebUI.maximizedWindow();
-		WebUI.clic(ObjectConstants.MULTIPLE_WINDOWS);
-		WebUI.clic(ObjectConstants.CLIC_HERE);
+		WebUI.click(ObjectConstants.MULTIPLE_WINDOWS);
+		WebUI.click(ObjectConstants.CLIC_HERE);
 		WebUI.moveToTab(StringConstants.CHILDID);
 		System.out.println(WebUI.getText(ObjectConstants.NEW_WINDOW_TEXT));
 		WebUI.moveToTab(StringConstants.PARENTID);
