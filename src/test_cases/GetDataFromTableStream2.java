@@ -27,8 +27,8 @@ public class GetDataFromTableStream2 {
 		//Switch to new childWindow
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> it = windows.iterator();
-		String parentID = it.next();
 		String childID = it.next();
+		childID = it.next();
 		driver.switchTo().window(childID);
 		
 		WebUI.setText(ObjectConstants.SEARCH_FRUIT, "Rice");

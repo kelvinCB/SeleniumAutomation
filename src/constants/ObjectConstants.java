@@ -10,8 +10,9 @@ public class ObjectConstants {
 	
 	public static final By LINKS_IN_A_PAGE					= By.tagName("a");
 	public static final By BUTTONS_IN_A_PAGE				= By.tagName("button");
-	public static final By TEXTBOX_IN_A_PAGE				= By.tagName("input");
+	public static final By TEXTBOXS_IN_A_PAGE				= By.tagName("input");
 	public static final By CELLS_IN_A_PAGE					= By.tagName("td");
+	public static final By LABELS_IN_A_PAGE					= By.tagName("label");
 	
 	
 	/**************************/
@@ -137,9 +138,14 @@ public class ObjectConstants {
 	/** FRAMES  / DRAG AND DROP  **/
 	/******************************/
 	
-	public static final By NAME_LABEL						= By.cssSelector("[name='name']");
-	public static final By EMAIL_LABEL						= By.cssSelector("[name='email']");
-	public static final By PASSWORD_LABEL					= By.cssSelector("[type='password']");
+	public static final By NAME_TEXTBOX						= By.cssSelector("[name='name']");
+	public static final By EMAIL_TEXTBOX					= By.cssSelector("[name='email']");
+	public static final By PASSWORD_TEXTBOX					= By.cssSelector("[type='password']");
+	public static final By NAME_LABEL						= By.xpath("//label[normalize-space()='Name']");
+	public static final By EMAIL_LABEL						= By.xpath("//label[.='Email']");
+	public static final By PASSWORD_LABEL					= By.xpath("//label[normalize-space()='Password']");
+	public static final By ICE_CREAM_LABEL					= By.xpath("//label[normalize-space()='Check me out if you Love IceCreams!']");
+	public static final By STUDENT_RADIOBUTTON				= By.id("inlineRadio1");
 	
 	
 	

@@ -1,5 +1,7 @@
 package controller;
 
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
 import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
@@ -157,9 +159,6 @@ public class WebUI {
 	}
 
 	public static void delay(int seconds) {
-
-		// WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-		// w.until(ExpectedConditions.visibilityOfElementLocated(null));
 
 		try {
 			System.out.println("Delay: "+seconds+" seconds");
@@ -469,6 +468,26 @@ public class WebUI {
 	
 	public static String getAttribute(By object, String attribute) {
 		return driver.findElement(object).getAttribute(attribute);
+	}
+	
+	public static WebElement aboveLocator(By commonObject, By referenceObject) {
+		WebElement webElement =  driver.findElement(with(commonObject).above(driver.findElement(referenceObject)));
+		return webElement;
+	}
+
+	public static WebElement belowLocator(By commonObject, By referenceObject) {
+		WebElement webElement =  driver.findElement(with(commonObject).below(driver.findElement(referenceObject)));
+		return webElement;
+	}
+	
+	public static WebElement leftOfLocator(By commonObject, By referenceObject) {
+		WebElement webElement =  driver.findElement(with(commonObject).toLeftOf(driver.findElement(referenceObject)));
+		return webElement;
+	}
+	
+	public static WebElement rightOfLocator(By commonObject, By referenceObject) {
+		WebElement webElement =  driver.findElement(with(commonObject).toRightOf(driver.findElement(referenceObject)));
+		return webElement;
 	}
 
 }
