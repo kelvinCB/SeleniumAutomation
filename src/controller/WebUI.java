@@ -421,22 +421,19 @@ public class WebUI {
 		driver.manage().deleteCookieNamed(cookieName);
 	}
 	
-	public static void takeScreenShot(WebDriver webdriver,String fileWithPath){
+		
+	public static void takeScreenShot(String fileWithPath){
 
         //Convert web driver object to TakeScreenshot
-
-        TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+        TakesScreenshot scrShot =((TakesScreenshot)driver);
 
         //Call getScreenshotAs method to create image file
-
         File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
 
         //Move image file to new destination
-
         File DestFile=new File(fileWithPath);
 
         //Copy file at destination
-
         try {
 			FileUtils.copyFile(SrcFile, DestFile);
 		} catch (IOException e) {
@@ -448,22 +445,18 @@ public class WebUI {
 
     }
 	
-	public static void takeScreenShot(String fileWithPath){
+	public static void takeScreenShot(By object, String fileWithPath){
 
-        //Convert web driver object to TakeScreenshot
-
-        TakesScreenshot scrShot =((TakesScreenshot)driver);
-
+		//Get element to screenshot
+		WebElement element = driver.findElement(object);
+		
         //Call getScreenshotAs method to create image file
-
-        File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+        File SrcFile=element.getScreenshotAs(OutputType.FILE);
 
         //Move image file to new destination
-
         File DestFile=new File(fileWithPath);
 
         //Copy file at destination
-
         try {
 			FileUtils.copyFile(SrcFile, DestFile);
 		} catch (IOException e) {

@@ -21,6 +21,7 @@ public class NewWindows {
 		String firstCourseName = driver.findElements(ObjectConstants.FIRST_COURSE_LISTED).get(1).getText();
 		WebUI.moveToTab(StringConstants.PARENTID);
 		WebUI.setText(ObjectConstants.NAME_TEXTBOX, firstCourseName);
+		WebUI.takeScreenShot(ObjectConstants.NAME_TEXTBOX, "Files/screenshots/nameTextBox.png");
 		WebUI.soundBeep();
 		WebUI.closeBrowser();
 		
