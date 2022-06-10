@@ -22,6 +22,7 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -331,6 +332,14 @@ public class WebUI {
 	public static void useKeyboard(Keys key) {
 		Actions actions = new Actions(driver);
 		actions.keyDown(key).build().perform();;
+	}
+	
+	public static void newTab() {
+		driver.switchTo().newWindow(WindowType.TAB);
+	}
+	
+	public static void newWindow() {
+		driver.switchTo().newWindow(WindowType.WINDOW);
 	}
 	
 	public static void moveToTab(String tab) {

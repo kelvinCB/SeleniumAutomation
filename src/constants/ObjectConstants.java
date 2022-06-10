@@ -147,6 +147,13 @@ public class ObjectConstants {
 	public static final By ICE_CREAM_LABEL					= By.xpath("//label[normalize-space()='Check me out if you Love IceCreams!']");
 	public static final By STUDENT_RADIOBUTTON				= By.id("inlineRadio1");
 	
+	/****************************/
+	/** RAHUL ACADEMY  / HOME  **/
+	/****************************/
+	
+	public static final By FIRST_COURSE_LISTED				= By.cssSelector("a[href*='https://courses.rahulshettyacademy.com/p']");
+	public static final By COURSES2							= By.cssSelector("[name='email']");
+
 	
 	
 }
