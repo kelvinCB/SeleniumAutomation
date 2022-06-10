@@ -492,4 +492,43 @@ public class WebUI {
 		return webElement;
 	}
 
+	public static String getElementHeight(By object) {
+		WebElement webElement = driver.findElement(object);
+		int height = webElement.getRect().getDimension().getHeight();
+		System.out.println("Height = "+height+" of: "+object);
+		return height+"";
+	 }
+
+	public static String getElementWidth(By object) {
+		WebElement webElement = driver.findElement(object);
+		int width = webElement.getRect().getDimension().getWidth();
+		System.out.println("Width = "+width+" of: "+object);
+		return width+"";
+	}
+	
+	public static String getElementLocation(By object) {
+		// TODO Auto-generated method stub
+		WebElement webElement = driver.findElement(object);
+		Point p = webElement.getLocation();
+		System.out.println("Position X= "+p.x+" of: "+object);
+		System.out.println("Position Y= "+p.y+" of: "+object);
+		return p.x+","+p.y;
+	}
+	
+	public static String getElementXLocation(By object) {
+		// TODO Auto-generated method stub
+		WebElement webElement = driver.findElement(object);
+		Point p = webElement.getLocation();
+		System.out.println("Position X= "+p.x+" of: "+object);
+		return p.x+"";
+	}
+	
+	public static String getElementYLocation(By object) {
+		// TODO Auto-generated method stub
+		WebElement webElement = driver.findElement(object);
+		Point p = webElement.getLocation();
+		System.out.println("Position Y= "+p.y+" of: "+object);
+		return p.y+"";
+	}
+
 }

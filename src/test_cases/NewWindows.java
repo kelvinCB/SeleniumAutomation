@@ -22,6 +22,11 @@ public class NewWindows {
 		WebUI.moveToTab(StringConstants.PARENTID);
 		WebUI.setText(ObjectConstants.NAME_TEXTBOX, firstCourseName);
 		WebUI.takeScreenShot(ObjectConstants.NAME_TEXTBOX, "Files/screenshots/nameTextBox.png");
+		WebUI.getElementLocation(ObjectConstants.NAME_TEXTBOX);
+		WebUI.getElementXLocation(ObjectConstants.NAME_TEXTBOX);
+		WebUI.getElementYLocation(ObjectConstants.NAME_TEXTBOX);
+		WebUI.getElementHeight(ObjectConstants.NAME_TEXTBOX);
+		WebUI.getElementWidth(ObjectConstants.NAME_TEXTBOX);
 		WebUI.soundBeep();
 		WebUI.closeBrowser();
 		
