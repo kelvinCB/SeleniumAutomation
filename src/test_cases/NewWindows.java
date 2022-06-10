@@ -30,7 +30,6 @@ public class NewWindows {
 		WebUI.soundBeep();
 		WebUI.closeBrowser();
 		
-
 	}
 
 }
