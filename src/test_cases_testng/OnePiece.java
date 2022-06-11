@@ -9,7 +9,7 @@ public class OnePiece {
 		System.out.println("One Piece Exists!!");
 	}
 	
-	@Test
+	@Test(groups={"Smoke"})
 	public void afterTimeSkip() {
 		System.out.println("Kaido Vs Nikka");
 	}

@@ -9,7 +9,7 @@ public class Example2 {
 		System.out.println("This is Example3");
 	}
 	
-	@Test
+	@Test(groups={"Smoke"})
 	public void test4() {
 		System.out.println("This is Example4");
 	}
