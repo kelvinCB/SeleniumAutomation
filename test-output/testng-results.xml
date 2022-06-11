@@ -1,51 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="13" passed="7">
+<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="JenkinsRegression" duration-ms="57" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+  <suite name="GeneralRegression" duration-ms="40" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
     <groups>
     </groups>
-    <test name="Example Scenario" duration-ms="32" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+    <test name="Packages Scenario" duration-ms="40" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
       <class name="test_cases_testng.Example2">
-        <test-method status="PASS" signature="test3()[pri:0, instance:test_cases_testng.Example2@e874448]" name="test3" duration-ms="0" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+        <test-method status="PASS" signature="test3()[pri:0, instance:test_cases_testng.Example2@4923ab24]" name="test3" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method status="PASS" signature="test4()[pri:0, instance:test_cases_testng.Example2@e874448]" name="test4" duration-ms="0" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+        <test-method status="PASS" signature="test4()[pri:0, instance:test_cases_testng.Example2@4923ab24]" name="test4" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test4 -->
       </class> <!-- test_cases_testng.Example2 -->
       <class name="test_cases_testng.Example1">
-        <test-method status="PASS" signature="test1()[pri:0, instance:test_cases_testng.Example1@2c039ac6]" name="test1" duration-ms="5" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+        <test-method status="PASS" signature="test1()[pri:0, instance:test_cases_testng.Example1@670b40af]" name="test1" duration-ms="1" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:test_cases_testng.Example1@2c039ac6]" name="test2" duration-ms="1" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+        <test-method status="PASS" signature="test2()[pri:0, instance:test_cases_testng.Example1@670b40af]" name="test2" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
       </class> <!-- test_cases_testng.Example1 -->
-    </test> <!-- Example Scenario -->
-    <test name="Anime Scenario" duration-ms="4" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
       <class name="test_cases_testng.OnePiece">
-        <test-method status="PASS" signature="afterTimeSkip()[pri:0, instance:test_cases_testng.OnePiece@4e718207]" name="afterTimeSkip" duration-ms="1" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+        <test-method status="PASS" signature="afterTimeSkip()[pri:0, instance:test_cases_testng.OnePiece@46daef40]" name="afterTimeSkip" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTimeSkip -->
+        <test-method status="PASS" signature="beforeTimeSkip()[pri:0, instance:test_cases_testng.OnePiece@46daef40]" name="beforeTimeSkip" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTimeSkip -->
       </class> <!-- test_cases_testng.OnePiece -->
       <class name="test_cases_testng.DragonBall">
-        <test-method status="PASS" signature="cellSaga()[pri:0, instance:test_cases_testng.DragonBall@543c6f6d]" name="cellSaga" duration-ms="0" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+        <test-method status="PASS" signature="cellSaga()[pri:0, instance:test_cases_testng.DragonBall@60285225]" name="cellSaga" duration-ms="5" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cellSaga -->
+        <test-method status="PASS" signature="freezerSaga()[pri:0, instance:test_cases_testng.DragonBall@60285225]" name="freezerSaga" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- freezerSaga -->
+        <test-method status="PASS" signature="majinBuuSaga()[pri:0, instance:test_cases_testng.DragonBall@60285225]" name="majinBuuSaga" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- majinBuuSaga -->
       </class> <!-- test_cases_testng.DragonBall -->
       <class name="test_cases_testng.NarutoShippuden">
-        <test-method status="PASS" signature="leeTrainer()[pri:0, instance:test_cases_testng.NarutoShippuden@13eb8acf]" name="leeTrainer" duration-ms="0" started-at="2022-06-11T00:08:43 BOT" finished-at="2022-06-11T00:08:43 BOT">
+        <test-method status="PASS" signature="leeTrainer()[pri:0, instance:test_cases_testng.NarutoShippuden@7b69c6ba]" name="leeTrainer" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leeTrainer -->
+        <test-method status="PASS" signature="narutoFood()[pri:0, instance:test_cases_testng.NarutoShippuden@7b69c6ba]" name="narutoFood" duration-ms="1" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- narutoFood -->
+        <test-method status="PASS" signature="narutoBestFriend()[pri:0, instance:test_cases_testng.NarutoShippuden@7b69c6ba]" name="narutoBestFriend" duration-ms="0" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- narutoBestFriend -->
+        <test-method status="PASS" signature="narutoTrainer()[pri:0, instance:test_cases_testng.NarutoShippuden@7b69c6ba]" name="narutoTrainer" duration-ms="1" started-at="2022-06-11T00:24:41 BOT" finished-at="2022-06-11T00:24:41 BOT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- narutoTrainer -->
       </class> <!-- test_cases_testng.NarutoShippuden -->
-    </test> <!-- Anime Scenario -->
-  </suite> <!-- JenkinsRegression -->
+    </test> <!-- Packages Scenario -->
+  </suite> <!-- GeneralRegression -->
 </testng-results>
