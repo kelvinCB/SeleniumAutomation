@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-04T10:28:08 BOT" name="Default suite" finished-at="2022-06-04T10:28:08 BOT" duration-ms="39">
+  <suite name="JenkinsRegression" duration-ms="32" started-at="2022-06-10T23:12:40 BOT" finished-at="2022-06-10T23:12:40 BOT">
     <groups>
     </groups>
-    <test started-at="2022-06-04T10:28:08 BOT" name="Default test" finished-at="2022-06-04T10:28:08 BOT" duration-ms="39">
-      <class name="test_cases.JavaStreams">
-        <test-method signature="regular()[pri:0, instance:test_cases.JavaStreams@446293d]" started-at="2022-06-04T10:28:08 BOT" name="regular" finished-at="2022-06-04T10:28:08 BOT" duration-ms="5" status="PASS">
+    <test name="Payment Link" duration-ms="32" started-at="2022-06-10T23:12:40 BOT" finished-at="2022-06-10T23:12:40 BOT">
+      <class name="test_cases_testng.Example2">
+        <test-method status="PASS" signature="test3()[pri:0, instance:test_cases_testng.Example2@7ce6a65d]" name="test3" duration-ms="1" started-at="2022-06-10T23:12:40 BOT" finished-at="2022-06-10T23:12:40 BOT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regular -->
-        <test-method signature="streamCollect()[pri:0, instance:test_cases.JavaStreams@446293d]" started-at="2022-06-04T10:28:08 BOT" name="streamCollect" finished-at="2022-06-04T10:28:08 BOT" duration-ms="3" status="PASS">
+        </test-method> <!-- test3 -->
+        <test-method status="PASS" signature="test4()[pri:0, instance:test_cases_testng.Example2@7ce6a65d]" name="test4" duration-ms="1" started-at="2022-06-10T23:12:40 BOT" finished-at="2022-06-10T23:12:40 BOT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- streamCollect -->
-        <test-method signature="streamFilter()[pri:0, instance:test_cases.JavaStreams@446293d]" started-at="2022-06-04T10:28:08 BOT" name="streamFilter" finished-at="2022-06-04T10:28:08 BOT" duration-ms="2" status="PASS">
+        </test-method> <!-- test4 -->
+      </class> <!-- test_cases_testng.Example2 -->
+      <class name="test_cases_testng.Example1">
+        <test-method status="PASS" signature="test1()[pri:0, instance:test_cases_testng.Example1@3e57cd70]" name="test1" duration-ms="5" started-at="2022-06-10T23:12:40 BOT" finished-at="2022-06-10T23:12:40 BOT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- streamFilter -->
-        <test-method signature="streamMap()[pri:0, instance:test_cases.JavaStreams@446293d]" started-at="2022-06-04T10:28:08 BOT" name="streamMap" finished-at="2022-06-04T10:28:08 BOT" duration-ms="3" status="PASS">
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:test_cases_testng.Example1@3e57cd70]" name="test2" duration-ms="0" started-at="2022-06-10T23:12:40 BOT" finished-at="2022-06-10T23:12:40 BOT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- streamMap -->
-      </class> <!-- test_cases.JavaStreams -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- test2 -->
+      </class> <!-- test_cases_testng.Example1 -->
+    </test> <!-- Payment Link -->
+  </suite> <!-- JenkinsRegression -->
 </testng-results>
