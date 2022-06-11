@@ -16,7 +16,11 @@
       <exclude name="beforeTimeSkip"/>
       </methods>
       </class>
-      <class name="test_cases_testng.DragonBall"/>
+      <class name="test_cases_testng.DragonBall">
+      <methods>
+      <include name="cellSaga"/>
+      </methods>
+      </class>
     </classes>
   </test> 
   
