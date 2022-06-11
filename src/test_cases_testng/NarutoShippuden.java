@@ -6,7 +6,7 @@ public class NarutoShippuden {
 	
 	@Test
 	public void narutoFood() {
-		System.out.println("Ichiraku Rame");
+		System.out.println("Ichiraku Ramen");
 	}
 	
 	@Test

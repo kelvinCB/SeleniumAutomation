@@ -6,6 +6,7 @@
 		<classes>
 			<class name="test_cases_testng.Example1" />
 			<class name="test_cases_testng.Example2" />
+			<class name="test_cases_testng.TestListeners" />
 		</classes>
 	</test>
 
