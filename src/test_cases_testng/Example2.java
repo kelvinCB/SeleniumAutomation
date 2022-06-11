@@ -1,5 +1,6 @@
 package test_cases_testng;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Example2 {
@@ -16,7 +17,14 @@ public class Example2 {
 	
 	@Test(enabled = false)
 	public void test5() {
-		System.out.println("This is Example4");
+		System.out.println("This is Example5");
+	}
+	
+	@Parameters({"URL"})
+	@Test
+	public void test6(String urlname) {
+		System.out.println("This is Example6");
+		System.out.println(urlname);
 	}
 
 }

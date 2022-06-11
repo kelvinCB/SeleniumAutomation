@@ -2,7 +2,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="GeneralRegression">
 
+	
 	<test thread-count="5" name="Smoke Scenario">
+	<parameter name = "URL" value = "qaclickacademy.com"/>
 		<groups>
 			<run>
 				<include name="Smoke" />
