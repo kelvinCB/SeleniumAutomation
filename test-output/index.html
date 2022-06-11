@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-JenkinsRegression">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,21 @@
                       <a href="#" panel-name="suite-JenkinsRegression" class="show-methods passed suite-JenkinsRegression"> (show)</a> <!-- show-methods passed suite-JenkinsRegression -->
                     </span>
                     <div class="method-list-content passed suite-JenkinsRegression">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-JenkinsRegression" title="test_cases_testng.OnePiece" hash-for-method="afterTimeSkip">afterTimeSkip</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-JenkinsRegression" title="test_cases_testng.DragonBall" hash-for-method="cellSaga">cellSaga</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-JenkinsRegression" title="test_cases_testng.DragonBall" hash-for-method="majinBuuSaga">majinBuuSaga</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-JenkinsRegression" title="test_cases_testng.Example1" hash-for-method="test1">test1</a> <!-- method navigator-link -->
@@ -134,6 +149,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-JenkinsRegression" class="panel JenkinsRegression">
+          <div class="suite-JenkinsRegression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test_cases_testng.OnePiece</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="afterTimeSkip">
+                  </a> <!-- afterTimeSkip -->
+                  <span class="method-name">afterTimeSkip</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-JenkinsRegression-class-passed -->
           <div class="suite-JenkinsRegression-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -178,6 +208,28 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-JenkinsRegression-class-passed -->
+          <div class="suite-JenkinsRegression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test_cases_testng.DragonBall</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cellSaga">
+                  </a> <!-- cellSaga -->
+                  <span class="method-name">cellSaga</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="majinBuuSaga">
+                  </a> <!-- majinBuuSaga -->
+                  <span class="method-name">majinBuuSaga</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-JenkinsRegression-class-passed -->
         </div> <!-- panel JenkinsRegression -->
         <div panel-name="test-xml-JenkinsRegression" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -188,12 +240,22 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;JenkinsRegression&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Payment Link&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Example Scenario&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test_cases_testng.Example1&quot;/&gt;
       &lt;class name=&quot;test_cases_testng.Example2&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Payment Link --&gt;
+  &lt;/test&gt; &lt;!-- Example Scenario --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Anime Scenario&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;test_cases_testng.OnePiece&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;beforeTimeSkip&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- test_cases_testng.OnePiece --&gt;
+      &lt;class name=&quot;test_cases_testng.DragonBall&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Anime Scenario --&gt;
 &lt;/suite&gt; &lt;!-- JenkinsRegression --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,7 +267,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Payment Link (2 classes)</span>
+                <span class="test-name">Example Scenario (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Anime Scenario (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,11 +296,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test1')
 data.setCell(0, 2, 'test_cases_testng.Example1')
-data.setCell(0, 3, 5);
+data.setCell(0, 3, 4);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'test3')
 data.setCell(1, 2, 'test_cases_testng.Example2')
@@ -245,9 +310,21 @@ data.setCell(2, 1, 'test4')
 data.setCell(2, 2, 'test_cases_testng.Example2')
 data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'test2')
-data.setCell(3, 2, 'test_cases_testng.Example1')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'afterTimeSkip')
+data.setCell(3, 2, 'test_cases_testng.OnePiece')
+data.setCell(3, 3, 1);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'test2')
+data.setCell(4, 2, 'test_cases_testng.Example1')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'cellSaga')
+data.setCell(5, 2, 'test_cases_testng.DragonBall')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'majinBuuSaga')
+data.setCell(6, 2, 'test_cases_testng.DragonBall')
+data.setCell(6, 3, 0);
 window.suiteTableData['JenkinsRegression']= { tableData: data, tableDiv: 'times-div-JenkinsRegression'}
 return data;
 }
@@ -267,9 +344,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-JenkinsRegression" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">test_cases_testng.OnePiece</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTimeSkip</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-JenkinsRegression" class="panel">
@@ -285,18 +369,36 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">test2</span>
-                <span class="method-start">7 ms</span>
+                <span class="method-start">6 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test_cases_testng.Example2</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">test3</span>
-                <span class="method-start">9 ms</span>
+                <span class="method-start">8 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">test4</span>
-                <span class="method-start">10 ms</span>
+                <span class="method-start">9 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test_cases_testng.OnePiece</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">afterTimeSkip</span>
+                <span class="method-start">32 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">test_cases_testng.DragonBall</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">cellSaga</span>
+                <span class="method-start">34 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">majinBuuSaga</span>
+                <span class="method-start">35 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
