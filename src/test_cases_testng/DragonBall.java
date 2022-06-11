@@ -13,5 +13,10 @@ public class DragonBall {
 	public void cellSaga() {
 		System.out.println("Gohan Vs Cell");
 	}
+	
+	@Test
+	public void freezerSaga() {
+		System.out.println("Goku Vs Freezer");
+	}
 
 }

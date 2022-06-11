@@ -2,27 +2,32 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="JenkinsRegression">
 
-  <test thread-count="5" name="Example Scenario">
-    <classes>
-      <class name="test_cases_testng.Example1"/>
-      <class name="test_cases_testng.Example2"/>
-    </classes>
-  </test> 
-  
-  <test thread-count="5" name="Anime Scenario">
-    <classes>
-      <class name="test_cases_testng.OnePiece">
-      <methods>
-      <exclude name="beforeTimeSkip"/>
-      </methods>
-      </class>
-      <class name="test_cases_testng.DragonBall">
-      <methods>
-      <include name="cellSaga"/>
-      </methods>
-      </class>
-    </classes>
-  </test> 
-  
-  
+	<test thread-count="5" name="Example Scenario">
+		<classes>
+			<class name="test_cases_testng.Example1" />
+			<class name="test_cases_testng.Example2" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="Anime Scenario">
+		<classes>
+			<class name="test_cases_testng.OnePiece">
+				<methods>
+					<exclude name="beforeTimeSkip" />
+				</methods>
+			</class>
+			<class name="test_cases_testng.DragonBall">
+				<methods>
+					<include name="cellSaga" />
+				</methods>
+			</class>
+			<class name="test_cases_testng.NarutoShippuden">
+				<methods>
+					<exclude name="naruto.*" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
 </suite> <!-- Suite -->
