@@ -9,8 +9,13 @@ public class Example2 {
 		System.out.println("This is Example3");
 	}
 	
-	@Test(groups={"Smoke"})
+	@Test(groups={"Smoke"}, dependsOnMethods = {"test3"})
 	public void test4() {
+		System.out.println("This is Example4");
+	}
+	
+	@Test(enabled = false)
+	public void test5() {
 		System.out.println("This is Example4");
 	}
 
