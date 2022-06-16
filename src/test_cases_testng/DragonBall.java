@@ -17,6 +17,6 @@ public class DragonBall {
 	@Test
 	public void freezerSaga() {
 		System.out.println("Goku Vs Freezer");
-	}
+	} 
 
 }
