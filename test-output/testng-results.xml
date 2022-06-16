@@ -1,38 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="8" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="GeneralRegression" duration-ms="34" started-at="2022-06-11T14:31:22 BOT" finished-at="2022-06-11T14:31:22 BOT">
+  <suite name="Default suite" duration-ms="36" started-at="2022-06-16T18:13:54 BOT" finished-at="2022-06-16T18:13:54 BOT">
     <groups>
       <group name="Smoke">
-        <method signature="Example2.test4()[pri:0, instance:test_cases_testng.Example2@5f3a4b84]" name="test4" class="test_cases_testng.Example2"/>
-        <method signature="OnePiece.afterTimeSkip()[pri:0, instance:test_cases_testng.OnePiece@670b40af]" name="afterTimeSkip" class="test_cases_testng.OnePiece"/>
-        <method signature="Example1.test1()[pri:0, instance:test_cases_testng.Example1@4abdb505]" name="test1" class="test_cases_testng.Example1"/>
+        <method signature="OnePiece.afterTimeSkip()[pri:0, instance:test_cases_testng.OnePiece@6b9651f3]" name="afterTimeSkip" class="test_cases_testng.OnePiece"/>
       </group> <!-- Smoke -->
     </groups>
-    <test name="Smoke Scenario" duration-ms="34" started-at="2022-06-11T14:31:22 BOT" finished-at="2022-06-11T14:31:22 BOT">
-      <class name="test_cases_testng.Example2">
-        <test-method status="PASS" signature="test3()[pri:0, instance:test_cases_testng.Example2@5f3a4b84]" name="test3" duration-ms="0" started-at="2022-06-11T14:31:22 BOT" finished-at="2022-06-11T14:31:22 BOT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-        <test-method status="PASS" signature="test4()[pri:0, instance:test_cases_testng.Example2@5f3a4b84]" name="test4" duration-ms="0" started-at="2022-06-11T14:31:22 BOT" depends-on-methods="test_cases_testng.Example2.test3" finished-at="2022-06-11T14:31:22 BOT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test4 -->
-      </class> <!-- test_cases_testng.Example2 -->
-      <class name="test_cases_testng.Example1">
-        <test-method status="PASS" signature="test1()[pri:0, instance:test_cases_testng.Example1@4abdb505]" name="test1" duration-ms="4" started-at="2022-06-11T14:31:22 BOT" finished-at="2022-06-11T14:31:22 BOT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-      </class> <!-- test_cases_testng.Example1 -->
+    <test name="Default test" duration-ms="36" started-at="2022-06-16T18:13:54 BOT" finished-at="2022-06-16T18:13:54 BOT">
       <class name="test_cases_testng.OnePiece">
-        <test-method status="PASS" signature="afterTimeSkip()[pri:0, instance:test_cases_testng.OnePiece@670b40af]" name="afterTimeSkip" duration-ms="0" started-at="2022-06-11T14:31:22 BOT" finished-at="2022-06-11T14:31:22 BOT">
+        <test-method status="PASS" signature="afterTimeSkip()[pri:0, instance:test_cases_testng.OnePiece@6b9651f3]" name="afterTimeSkip" duration-ms="5" started-at="2022-06-16T18:13:54 BOT" finished-at="2022-06-16T18:13:54 BOT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTimeSkip -->
+        <test-method status="PASS" signature="beforeTimeSkip()[pri:0, instance:test_cases_testng.OnePiece@6b9651f3]" name="beforeTimeSkip" duration-ms="0" started-at="2022-06-16T18:13:54 BOT" finished-at="2022-06-16T18:13:54 BOT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTimeSkip -->
+        <test-method status="PASS" signature="gearFive(java.lang.String,java.lang.String)[pri:0, instance:test_cases_testng.OnePiece@6b9651f3]" name="gearFive" duration-ms="1" started-at="2022-06-16T18:13:54 BOT" data-provider="getData" finished-at="2022-06-16T18:13:54 BOT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gearFive -->
+        <test-method status="PASS" signature="gearFive(java.lang.String,java.lang.String)[pri:0, instance:test_cases_testng.OnePiece@6b9651f3]" name="gearFive" duration-ms="1" started-at="2022-06-16T18:13:54 BOT" data-provider="getData" finished-at="2022-06-16T18:13:54 BOT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gearFive -->
+        <test-method status="PASS" signature="gearFive(java.lang.String,java.lang.String)[pri:0, instance:test_cases_testng.OnePiece@6b9651f3]" name="gearFive" duration-ms="1" started-at="2022-06-16T18:13:54 BOT" data-provider="getData" finished-at="2022-06-16T18:13:54 BOT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gearFive -->
       </class> <!-- test_cases_testng.OnePiece -->
-    </test> <!-- Smoke Scenario -->
-  </suite> <!-- GeneralRegression -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

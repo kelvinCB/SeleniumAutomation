@@ -3,6 +3,8 @@
 <suite name="JenkinsRegression">
 
 	<test thread-count="5" name="Example Scenario">
+		<parameter name = "URL" value = "qaclickacademy.com"/>
+		<parameter name = "username" value = "kelvin"/>
 		<classes>
 			<class name="test_cases_testng.TestListeners" />
 			<class name="test_cases_testng.Example1" />

@@ -20,11 +20,14 @@ public class Example2 {
 		System.out.println("This is Example5");
 	}
 	
-	@Parameters({"URL"})
+	@Parameters({"URL", "username"})
 	@Test
-	public void test6(String urlname) {
+	public void test6(String urlname, String key) {
 		System.out.println("This is Example6");
 		System.out.println(urlname);
+		System.out.println(key);
 	}
+	
+	
 
 }
