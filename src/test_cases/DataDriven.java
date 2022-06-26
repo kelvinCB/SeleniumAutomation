@@ -3,6 +3,8 @@ package test_cases;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -12,20 +14,19 @@ public class DataDriven {
     public static void main(String[] args) throws IOException {
         // TODO Auto-generated method stub
 
-        getExcelData();
-
-        // try {
-        //     FileInputStream fis = new FileInputStream("Files/dataFiles/testdata1.xlsx");
-        //     XSSFWorkbook workbook = new XSSFWorkbook(fis);
-        //     XSSFSheet dataExampleSheet = workbook.getSheet("dataExample");
+      
+            FileInputStream fis = new FileInputStream("Files/dataFiles/testdata1.xlsx");
+            XSSFWorkbook workbook = new XSSFWorkbook(fis);
+            XSSFSheet dataExampleSheet = workbook.getSheet("dataExample");
+    
+            Row row = dataExampleSheet.getRow(0);
+            Cell cell = row.getCell(0);
+            System.out.println(dataExampleSheet.getRow(0).getCell(0));
             
-        //     System.out.println(dataExampleSheet.getSheetName());
-        //     workbook.close();
-        //     fis.close();
-        // } catch (IOException e) {
-        //     // TODO Auto-generated catch block
-        //     e.printStackTrace();
-        // }
+//            System.out.println(dataExampleSheet.getSheetName());
+//            workbook.close();
+//            fis.close();
+     
 
     }
 
