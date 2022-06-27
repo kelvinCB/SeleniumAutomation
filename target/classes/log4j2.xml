@@ -6,6 +6,9 @@
     </Console>
   </Appenders>
   <Loggers>
+   <Logger name="test_cases.Log4jDemo2" level="error" additivity="false">
+      <AppenderRef ref="Console"/>
+    </Logger>
     <Root level="trace">
       <AppenderRef ref="Console"/>
     </Root>
