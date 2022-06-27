@@ -29,7 +29,6 @@ public class DemoQA {
 		Assert.assertEquals(WebUI.getText(ObjectConstants.WILL_ENABLE_5_SECONDS), "Will enable 5 seconds");
 		WebUI.soundBeep();
 		WebUI.closeBrowser();
-		
 
 	}
 

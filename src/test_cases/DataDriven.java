@@ -14,27 +14,28 @@ public class DataDriven {
     public static void main(String[] args) throws IOException {
         // TODO Auto-generated method stub
 
-      
-            FileInputStream fis = new FileInputStream("Files/dataFiles/testdata1.xlsx");
-            XSSFWorkbook workbook = new XSSFWorkbook(fis);
+    	//getExcelData();
+    	
+            FileInputStream file = new FileInputStream("Files/dataFiles/testdata1.xlsx");
+            XSSFWorkbook workbook = new XSSFWorkbook(file);
             XSSFSheet dataExampleSheet = workbook.getSheet("dataExample");
     
             Row row = dataExampleSheet.getRow(0);
             Cell cell = row.getCell(0);
-            System.out.println(dataExampleSheet.getRow(0).getCell(0));
+            System.out.println(cell);
             
-//            System.out.println(dataExampleSheet.getSheetName());
-//            workbook.close();
-//            fis.close();
+            System.out.println(dataExampleSheet.getSheetName());
+            workbook.close();
+            file.close();
      
 
     }
 
     public static void getExcelData() throws IOException{
-         //Get firts cell data from Excel sheet
+         //Get first cell data from Excel sheet
          FileInputStream file = new FileInputStream("Files/dataFiles/testdata1.xlsx");
          XSSFWorkbook workbook = new XSSFWorkbook(file);
-         XSSFSheet sheet = workbook.getSheet("Sheet1");
+         XSSFSheet sheet = workbook.getSheet("dataExample");
          String firstCellData = sheet.getRow(0).getCell(0).getStringCellValue();
          System.out.println(firstCellData);
          
